@@ -1,4 +1,4 @@
-// This page was created by Lily Samimi
+// This page was created by Michael Grisafe
 
 package com.lilysamimi.famcamproject;
 
@@ -8,19 +8,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
-public class MainActivity extends Activity {
+public class SettingsActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_settings);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.settings, menu);
         return true;
     }
 
@@ -35,18 +35,25 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);
 
-       // When user clicks on Start button go to My Family page
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
 
     }
 
     public void startActivity(Intent intent) {
         super.startActivity(intent);
-        // When user clicks on Settings button go to Settings page
+        // When user clicks on New User Registration, go to New User page
     }
+
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        // When user clicks on Logout, go to Main Activity
+    }
+
 }
+
+
 }

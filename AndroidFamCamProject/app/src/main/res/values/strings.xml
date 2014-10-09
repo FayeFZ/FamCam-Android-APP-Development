@@ -4,5 +4,7 @@
     <string name="app_name">FamCamProject</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_add_family">AddFamily</string>
 
 </resources>

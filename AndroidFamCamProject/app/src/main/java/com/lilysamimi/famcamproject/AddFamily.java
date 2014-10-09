@@ -1,26 +1,24 @@
-// This page was created by Lily Samimi
-
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends Activity {
+public class AddFamily extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_family);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.add_family, menu);
         return true;
     }
 
@@ -35,18 +33,4 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-
-       // When user clicks on Start button go to My Family page
-
-    }
-
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        // When user clicks on Settings button go to Settings page
-    }
-}
 }
