@@ -24,6 +24,18 @@
             android:name=".AddFamily"
             android:label="@string/title_activity_add_family" >
         </activity>
+        <activity
+            android:name=".AddFamilyMembers"
+            android:label="@string/title_activity_add_family_members" >
+        </activity>
+        <activity
+            android:name=".NewUserLogin"
+            android:label="@string/title_activity_new_user_login" >
+        </activity>
+        <activity
+            android:name=".MyFamily"
+            android:label="@string/title_activity_my_family" >
+        </activity>
     </application>
 
 </manifest>
