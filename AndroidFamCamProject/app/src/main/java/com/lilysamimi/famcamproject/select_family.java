@@ -1,3 +1,4 @@
+// This page was created by Fei Zhao
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;

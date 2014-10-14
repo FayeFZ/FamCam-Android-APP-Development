@@ -1,3 +1,5 @@
+// This page was created by Michael Grisafe
+
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;

@@ -1,3 +1,6 @@
+// This page was created by Lily Samimi
+
+
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
