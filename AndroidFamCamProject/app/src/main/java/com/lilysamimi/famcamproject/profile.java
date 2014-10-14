@@ -1,6 +1,7 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,5 +33,14 @@ public class profile extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        // When user clicks on record go to record
+    }
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+        // When user clicks on video go to video
     }
 }
