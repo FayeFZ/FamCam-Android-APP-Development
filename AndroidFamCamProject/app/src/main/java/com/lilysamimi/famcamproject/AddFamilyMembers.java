@@ -35,11 +35,28 @@ public class AddFamilyMembers extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+
+        // When user clicks on add from address book we require 3 methods
+        // 1.  pull contacts from address book and phone numbers
+        // 2.  match these numbers to registered members in database
+        // 3.if a match is found, bring in family member and display with add button
+        // 4. if a match is not found display without add button
+
+
+    }
+}
+
+
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);
 
         // When user clicks on finish button go to my familypage
+        // If the user adds a family member, that family member is added on the my family activity screen
 
     }
 }

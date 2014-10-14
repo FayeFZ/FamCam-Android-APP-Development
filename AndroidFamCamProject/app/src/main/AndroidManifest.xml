@@ -36,6 +36,10 @@
             android:name=".MyFamily"
             android:label="@string/title_activity_my_family" >
         </activity>
+        <activity
+            android:name=".profile"
+            android:label="@string/title_activity_profile" >
+        </activity>
     </application>
 
 </manifest>

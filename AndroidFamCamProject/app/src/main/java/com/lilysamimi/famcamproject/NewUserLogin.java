@@ -39,7 +39,10 @@ public class NewUserLogin extends Activity {
     public void startActivity(Intent intent) {
         super.startActivity(intent);
 
-        // When user clicks on Submit button go to Add Family Members page
+
+
+        // 1.When information in inputted and Submit button is clicked information is passed to database
+        //2.  Go to Add Family Members page
 
     }
 }
