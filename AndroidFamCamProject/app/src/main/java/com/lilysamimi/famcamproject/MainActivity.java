@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends Activity {
@@ -36,16 +37,15 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-
-       // When user clicks on Start button go to My Family page
-
+    public void start(View) {
+        Intent intent = new Intent(this, MyFamily.class);
+        startActivity(intent);
+        // When user clicks on Start button go to My Family page
     }
 
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
+    public void settings(View)
+    Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
         // When user clicks on Settings button go to Settings page
     }
 }

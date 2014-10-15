@@ -1,4 +1,4 @@
-// This page was created by Lily Samimi
+<!-- This page was created by Lily Samimi -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,7 +15,7 @@
     <Button
         android:id="@+id/action_settings"
         android:text="Settings"
-        android:onClick="activity_settings"
+        android:onClick="settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#666666"
