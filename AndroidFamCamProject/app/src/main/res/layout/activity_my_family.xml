@@ -53,60 +53,36 @@
         android:paddingRight="20dp"
         android:onClick="myprofile" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="116dp"
-        android:src="@drawable/woman" />
-=======
+    <![CDATA[=======
         android:id="@+id/imageView"
         android:layout_marginBottom="57dp" />
 >>>>>>> Stashed changes
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:id="@+id/imageButton2"
-        android:layout_below="@+id/button"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginTop="53dp"
-        android:src="@drawable/man2" />
+
 =======
         android:id="@+id/imageView2"
         android:layout_toEndOf="@+id/textView"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+
+
+    ]]>
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton3"
-        android:layout_toEndOf="@+id/imageButton"
         android:src="@drawable/man"
         android:clickable="true"
-        android:layout_alignTop="@+id/imageButton2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton4"
-        android:layout_toEndOf="@+id/imageButton"
         android:src="@drawable/woman"
         android:clickable="true"
         android:layout_below="@+id/imageButton3"
