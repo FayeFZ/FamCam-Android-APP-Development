@@ -8,9 +8,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
+  tools:context=".MainActivity"
     android:background="#D51E4D"
-    android:id="@+id/">
+    android:id="@+id/"
+    >
 
     <Button
         android:id="@+id/action_settings"
@@ -51,7 +52,7 @@
         android:layout_below="@+id/action_settings"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="73dp"
-        android:background="#fffffff"
-        android:src="@drawable/KidMobileApp_Icon_v2" />
+        android:background="#D51E4D"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

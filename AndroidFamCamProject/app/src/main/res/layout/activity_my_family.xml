@@ -1,5 +1,4 @@
-// This page was created by Michael Grisafe
-//I can't figure out how to scale the images in this program.  Do we need to scale them outside and then reimport them?
+<!--This page was created by Michael GrisafeI can't figure out how to scale the images in this program.  Do we need to scale them outside and then reimport them?-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
