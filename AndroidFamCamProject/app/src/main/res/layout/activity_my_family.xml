@@ -46,6 +46,7 @@
         android:layout_toStartOf="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/button"
         android:textColor="#FFFFFF"
         android:background="#2A2E7B"
         android:clickable="true"
