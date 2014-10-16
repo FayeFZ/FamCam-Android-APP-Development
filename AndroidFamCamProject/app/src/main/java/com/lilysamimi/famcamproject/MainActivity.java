@@ -49,4 +49,4 @@ public class MainActivity extends Activity {
         // When user clicks on Settings button go to Settings page
     }
 }
-}
+
