@@ -1,4 +1,4 @@
-// This page was created by Fei Zhao
+<!--This page was created by Fei Zhao-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -53,26 +53,5 @@
         android:layout_toRightOf="@+id/imageView"
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView" />
-
-    <VideoView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/videoView"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_marginTop="68dp"
-        android:layout_toStartOf="@+id/textView2"
-        android:layout_toLeftOf="@+id/textView2"
-        android:clickable="true" />
-
-    <VideoView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/videoView2"
-        android:layout_alignTop="@+id/videoView"
-        android:layout_toEndOf="@+id/videoView"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
 
 </RelativeLayout>
