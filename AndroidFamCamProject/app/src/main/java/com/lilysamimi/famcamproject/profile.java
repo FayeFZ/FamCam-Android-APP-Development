@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class profile extends Activity {
@@ -37,12 +38,17 @@ public class profile extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        // When user clicks on record go to record
+
+   // public void openRecord(View view) {
+       // Intent intent = new Intent(this, Record.class);
+       // startActivity(intent);
+        // When user clicks on record, go to record in android camera
+   // }
+
+    public void openMyFamily(View view) {
+        Intent intent = new Intent(this, MyFamily.class);
+        startActivity(intent);
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
     }
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        // When user clicks on video go to video
-    }
+
 }

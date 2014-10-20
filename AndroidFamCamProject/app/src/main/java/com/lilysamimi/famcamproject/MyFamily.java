@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
+import android.view.View;
 
 
 public class MyFamily extends Activity {
@@ -36,25 +38,45 @@ public class MyFamily extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void record(View view) {
-        Intent intent= new Intent(this, RecordActivity.class);
-        startActivity(intent);
-    };
+    //public void openRecord(View view) {
+        //Intent intent = new Intent(this, Record.class);
+        //startActivity(intent);
         // When user clicks on record go to record screen
+    //}
 
-    @Override
-    public void myProfile(View view) {
-        Intent intent= new Intent(this, MyProfile.class);
+    public void openMember1(View view) {
+        Intent intent = new Intent(this, Member1.class);
         startActivity(intent);
-    };
-    // When user clicks on MyProfle go to My Profile screen
+    }
+    // When user clicks on Member1 image go to Member 1 profile screen
 
-
-    @Override
-    public void familyImage(View view) {
-        Intent intent= new Intent(this, FamilyImage.class);
+    public void openMember2(View view) {
+        Intent intent = new Intent(this, Member2.class);
         startActivity(intent);
-    };
-    // When user clicks on any FamilyMember go to Grandma Tata Profile demo screen
+    }
+    // When user clicks on Member2 image go to Member 2 profile screen
+
+    public void openMember3(View view) {
+        Intent intent = new Intent(this, Member3.class);
+        startActivity(intent);
+    }
+    // When user clicks on Member3 image go to Member3 profile screen
+
+public void openMember4(View view) {
+        Intent intent = new Intent(this, Member4.class);
+        startActivity(intent);
+    }
+    // When user clicks on Member4 image go to Member 4 profile screen
+
+    public void openProfile(View view) {
+        Intent intent = new Intent(this, profile.class);
+        startActivity(intent);
+    }
+    // When user clicks on My Profile button go to my profile screen
+
 }
+
+
+
+
+

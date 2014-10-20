@@ -44,6 +44,22 @@
             android:name=".select_family"
             android:label="@string/title_activity_select_family" >
         </activity>
+        <activity
+            android:name=".Member1"
+            android:label="@string/title_activity_member1" >
+        </activity>
+        <activity
+            android:name=".Member2"
+            android:label="@string/title_activity_member2" >
+        </activity>
+        <activity
+            android:name=".Member3"
+            android:label="@string/title_activity_member3" >
+        </activity>
+        <activity
+            android:name=".Member4"
+            android:label="@string/title_activity_member4" >
+        </activity>
     </application>
 
 </manifest>

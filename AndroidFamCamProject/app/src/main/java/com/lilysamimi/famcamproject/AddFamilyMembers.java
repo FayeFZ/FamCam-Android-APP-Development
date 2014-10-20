@@ -54,12 +54,3 @@ public class AddFamilyMembers extends Activity {
 }
 
 
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-
-        // When user clicks on finish button go to my familypage
-        // If the user adds a family member, that family member is added on the my family activity screen
-
-    }
-}

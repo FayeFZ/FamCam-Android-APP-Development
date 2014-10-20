@@ -1,44 +1,24 @@
-// This page was created by Fei Zhao
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.content.Intent;
 
 
-public class select_family extends Activity {
+public class Member2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_family);
+        setContentView(R.layout.activity_member2);
     }
-
-
-    //@Override
-    //public void record(View view) {
-       // Intent intent= new Intent(this, RecordActivity.class);
-    //    startActivity(intent);
- //   };
-    // When user clicks on check button
-
-
-    public void myProfile(View view) {
-        Intent intent= new Intent(this, profile.class);
-        startActivity(intent);
-    };
-    // When user clicks on finish sending, video send to selected profile
-
-   
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.select_family, menu);
+        getMenuInflater().inflate(R.menu.member2, menu);
         return true;
     }
 
@@ -53,4 +33,10 @@ public class select_family extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //public void openRecord(View view) {
+    // Intent intent = new Intent(this, Record.class);
+    // startActivity(intent);
+    // When user clicks on Record button, open record
+    //}
 }

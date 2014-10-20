@@ -1,5 +1,3 @@
-// This page was created by Michael Grisafe
-
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
@@ -9,19 +7,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class SettingsActivity extends Activity {
+
+public class Member1 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_member1);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.settings, menu);
+        getMenuInflater().inflate(R.menu.member1, menu);
         return true;
     }
 
@@ -37,25 +36,11 @@ public class SettingsActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void openAddFamilyMember(View view) {
-            Intent intent = new Intent(this, AddFamilyMembers.class);
-            startActivity(intent);
-        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
-    }
 
-    public void openNewUser(View view) {
-        Intent intent = new Intent(this, NewUserLogin.class);
-        startActivity(intent);
-        // When user clicks on New User, go to New User Login page
-    }
-
-    public void openMain(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        // When user clicks on Logout, go to Main Activity
-    }
+    //public void openRecord(View view) {
+       // Intent intent = new Intent(this, Record.class);
+       // startActivity(intent);
+       // When user clicks on Record button, open record
+    //}
 
 }
-
-
-

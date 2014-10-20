@@ -37,15 +37,15 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void start(View view) {
+    public void openMyFamily(View view) {
         Intent intent = new Intent(this, MyFamily.class);
         startActivity(intent);
         // When user clicks on Start button go to My Family page
     }
 
-    public void settings(View view);
+    public void openSettings(View view){
     Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent intent);
+        startActivity(intent);
         // When user clicks on Settings button go to Settings page
     }
 }

@@ -11,5 +11,9 @@
     <string name="title_activity_my_family">MyFamily</string>
     <string name="title_activity_profile">profile</string>
     <string name="title_activity_select_family">select_family</string>
+    <string name="title_activity_member1">Member1</string>
+    <string name="title_activity_member2">Member2</string>
+    <string name="title_activity_member3">Member3</string>
+    <string name="title_activity_member4">Member4</string>
 
 </resources>
