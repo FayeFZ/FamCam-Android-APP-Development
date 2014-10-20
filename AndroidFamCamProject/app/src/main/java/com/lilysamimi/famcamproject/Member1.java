@@ -36,11 +36,15 @@ public class Member1 extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
     //public void openRecord(View view) {
-       // Intent intent = new Intent(this, Record.class);
-       // startActivity(intent);
-       // When user clicks on Record button, open record
+    // Intent intent = new Intent(this, Record.class);
+    // startActivity(intent);
+    // When user clicks on Record button, open record
     //}
 
+    public void openMyFamily(View view) {
+        Intent intent = new Intent(this, MyFamily.class);
+        startActivity(intent);
+        // When user clicks on My Family button, go to My Family page
+    }
 }

@@ -40,6 +40,7 @@
         android:clickable="true"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
-        android:background="#2A2E7B" />
+        android:background="#2A2E7B"
+        android:onClick="openMyFamily" />
 
 </RelativeLayout>

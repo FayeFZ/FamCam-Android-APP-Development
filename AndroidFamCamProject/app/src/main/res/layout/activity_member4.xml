@@ -55,4 +55,19 @@
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Family"
+        android:id="@+id/button2"
+        android:layout_toStartOf="@+id/button"
+        android:textColor="#FFFFFF"
+        android:background="#2A2E7B"
+        android:clickable="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:onClick="openMyFamily"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

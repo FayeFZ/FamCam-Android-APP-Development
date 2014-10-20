@@ -1,5 +1,3 @@
-// This page was created by Michael Grisafe
-
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
@@ -7,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class NewUserLogin extends Activity {
@@ -37,14 +36,11 @@ public class NewUserLogin extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-
-
-
-        // 1.When information in inputted and Submit button is clicked information is passed to database
-        //2.  Go to Add Family Members page
-
+    public void openAddFamilyMember(View view) {
+        Intent intent = new Intent(this, AddFamilyMembers.class);
+        startActivity(intent);
+        // When user clicks on Submit button, go to Add Family Member page
     }
+
+
 }

@@ -38,7 +38,6 @@ public class profile extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
    // public void openRecord(View view) {
        // Intent intent = new Intent(this, Record.class);
        // startActivity(intent);
@@ -48,7 +47,7 @@ public class profile extends Activity {
     public void openMyFamily(View view) {
         Intent intent = new Intent(this, MyFamily.class);
         startActivity(intent);
-        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
+        // When user clicks on My Family button, go to My Family page
     }
 
 }

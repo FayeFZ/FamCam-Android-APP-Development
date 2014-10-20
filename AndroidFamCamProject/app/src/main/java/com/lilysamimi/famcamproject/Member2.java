@@ -1,9 +1,11 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Member2 extends Activity {
@@ -39,4 +41,9 @@ public class Member2 extends Activity {
     // startActivity(intent);
     // When user clicks on Record button, open record
     //}
+    public void openMyFamily(View view) {
+        Intent intent = new Intent(this, MyFamily.class);
+        startActivity(intent);
+        // When user clicks on My Family button, go to My Family page
+    }
 }
