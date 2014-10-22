@@ -1,8 +1,9 @@
 <!-- This page was created by Michael Grisafe Sorry Guys, I can't figure out how to get the program to render text input when I drag that widget onto the design screen.  Currently text input left out. -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -12,132 +13,122 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Let's get started!  Enter your information below to find your family members"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="First Name"
-        android:id="@+id/textView2"
-        android:layout_toStartOf="@+id/button"
-        android:layout_below="@+id/textView"
-        android:layout_toLeftOf="@+id/button"
-        android:layout_marginTop="27dp" />
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:id="@+id/txtFirstname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Maria"
+        android:layout_marginTop="10dp"
+        android:id="@+id/editxtFirstname"
+        android:background="#bcf4ff"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last Name"
-        android:id="@+id/textView3"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:textStyle="bold"
+        android:id="@+id/txtLastname"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Hill"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:id="@+id/editxtLastname"
+        android:background="#bcf4ff"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone Number"
-        android:id="@+id/textView4"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:textStyle="bold"
+        android:id="@+id/textPhonenumber"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editxtPhonenumber"
+        android:background="#bcf4ff"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="(734) 867 - 2345" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="Provide your phone number so that other family members can find you"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
+        android:textSize="11sp"
+        android:id="@+id/textView5" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Password"
-        android:id="@+id/textView6"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_marginTop="34dp"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_below="@+id/textView5"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_alignStart="@+id/textView5" />
+        android:textStyle="bold"
+        android:id="@+id/txtPassword"
+        android:layout_marginTop="20dp" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="#bcf4ff"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:id="@+id/editxtPassword"
+        android:text="999999" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm Password"
-        android:id="@+id/textView7"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_marginTop="37dp" />
+        android:textStyle="bold"
+        android:id="@+id/txtConfrimpassword"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="#bcf4ff"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:id="@+id/editxtConfirmpassword"
+        android:text="999999" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
         android:textColor="#FFFFFF"
         android:background="#2A2E7B"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:onClick="AddMamilyMembers" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Let's get started!  Enter your information below to find your family members"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView5"
-        android:layout_alignRight="@+id/textView7"
-        android:layout_alignEnd="@+id/textView7" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView5"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:editable="true"
-        android:height="2dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/textView5"
-        android:layout_alignRight="@+id/textView7"
-        android:layout_alignEnd="@+id/textView7" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/textView6"
-        android:layout_alignRight="@+id/textView7"
-        android:layout_alignEnd="@+id/textView7"
-        android:password="true"
-        android:background="#ff000000" />
-
-</RelativeLayout>
+</LinearLayout>
