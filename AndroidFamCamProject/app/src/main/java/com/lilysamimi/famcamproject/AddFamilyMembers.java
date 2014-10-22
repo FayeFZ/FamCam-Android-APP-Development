@@ -49,11 +49,16 @@ public class AddFamilyMembers extends Activity {
         // 4. if a match is not found display without add button
         //}
 
-    public void openMyFamilyAddress(View view) {
-        Intent intent= new Intent(this, AddFamilyMembersAddressBook.class);
+    public void openMyFamily(View view) {
+        Intent intent= new Intent(this, MyFamily.class);
         startActivity(intent);
     };
     // When user clicks on finish, go to My Family page
+
+    public void openAddFamilyAddress(View view) {
+        Intent intent= new Intent(this, AddFamilyMembersAddressBook.class);
+        startActivity(intent);
+    };
 
 }
 
