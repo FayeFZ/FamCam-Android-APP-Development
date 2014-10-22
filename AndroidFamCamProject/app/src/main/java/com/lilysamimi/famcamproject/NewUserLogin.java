@@ -36,7 +36,7 @@ public class NewUserLogin extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void openAddFamilyMember(View view) {
+    public void openAddFamilyMembers(View view) {
         Intent intent = new Intent(this, AddFamilyMembers.class);
         startActivity(intent);
         // When user clicks on Submit button, go to Add Family Member page
