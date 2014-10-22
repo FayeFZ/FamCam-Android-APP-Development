@@ -8,19 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class NewUserLogin extends Activity {
+public class AddFamilyMembersAddressBook extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_user_login);
+        setContentView(R.layout.activity_add_family_members_address_book);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.new_user_login, menu);
+        getMenuInflater().inflate(R.menu.add_family_members_address_book, menu);
         return true;
     }
 
@@ -36,11 +36,15 @@ public class NewUserLogin extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void openAddFamilyMember(View view) {
-        Intent intent = new Intent(this, AddFamilyMembers.class);
+    public void openSearchAddress(View view) {
+        Intent intent = new Intent(this, AddFamilyMembersAddressBook.class);
         startActivity(intent);
-        // When user clicks on Submit button, go to Add Family Member page
     }
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
 
-
+    public void openMyFamily(View view) {
+        Intent intent = new Intent(this, MyFamily.class);
+        startActivity(intent);
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
+    }
 }

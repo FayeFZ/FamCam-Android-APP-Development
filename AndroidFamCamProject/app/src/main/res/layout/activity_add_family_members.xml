@@ -26,7 +26,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentLeft="true"
+        android:onClick="openAddFamilyAddress" />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,6 +41,7 @@
         android:clickable="true"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
-        android:background="#2A2E7B" />
+        android:background="#2A2E7B"
+        android:onClick="openMyFamily" />
 
 </RelativeLayout>
