@@ -1,6 +1,3 @@
-// This page was created by Lily Samimi
-
-
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
@@ -11,19 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class AddFamilyMembers extends Activity {
+public class AddFamilyMembersAddressBook extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_family_members);
+        setContentView(R.layout.activity_add_family_members_address_book);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.add_family_members, menu);
+        getMenuInflater().inflate(R.menu.add_family_members_address_book, menu);
         return true;
     }
 
@@ -39,22 +36,15 @@ public class AddFamilyMembers extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    //public void startActivity(Intent intent) {
-       // super.startActivity(intent);
-
-        // When user clicks on add from address book we require 3 methods
-        // 1.  pull contacts from address book and phone numbers
-        // 2.  match these numbers to registered members in database
-        // 3.if a match is found, bring in family member and display with add button
-        // 4. if a match is not found display without add button
-        //}
-
-    public void openMyFamilyAddress(View view) {
-        Intent intent= new Intent(this, AddFamilyMembersAddressBook.class);
+    public void openSearchAddress(View view) {
+        Intent intent = new Intent(this, AddFamilyMembersAddressBook.class);
         startActivity(intent);
-    };
-    // When user clicks on finish, go to My Family page
+    }
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
 
+    public void openMyFamily(View view) {
+        Intent intent = new Intent(this, MyFamily.class);
+        startActivity(intent);
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
+    }
 }
-
-

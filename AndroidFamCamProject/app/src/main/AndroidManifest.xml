@@ -60,6 +60,10 @@
             android:name=".Member4"
             android:label="@string/title_activity_member4" >
         </activity>
+        <activity
+            android:name=".AddFamilyMembersAddressBook"
+            android:label="@string/title_activity_add_family_members_address_book" >
+        </activity>
     </application>
 
 </manifest>
