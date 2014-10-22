@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 <!-- This page was created by Michael Grisafe Sorry Guys, I can't figure out how to get the program to render text input when I drag that widget onto the design screen.  Currently text input left out. -->
-=======
->>>>>>> FETCH_HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,9 +11,7 @@
     tools:context="com.lilysamimi.famcamproject.NewUserLogin">
 
     <TextView
-        android:text="Let's get started! Enter your information below to find your family members."
         android:layout_width="wrap_content"
-<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:text="Let's get started!  Enter your information below to find your family members"
         android:id="@+id/textView"
@@ -38,15 +33,10 @@
         android:layout_marginTop="10dp"
         android:id="@+id/editxtFirstname"
         android:background="#bcf4ff"/>
-=======
-        android:layout_height="wrap_content" />
->>>>>>> FETCH_HEAD
 
     <TextView
-        android:text="First Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:text="Last Name"
         android:textStyle="bold"
         android:id="@+id/txtLastname"
@@ -61,15 +51,10 @@
         android:layout_marginTop="10dp"
         android:id="@+id/editxtLastname"
         android:background="#bcf4ff"/>
-=======
-        android:id="@+id/textView" />
->>>>>>> FETCH_HEAD
 
     <TextView
-        android:text="Last Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:text="Phone Number"
         android:textStyle="bold"
         android:id="@+id/textPhonenumber"
@@ -85,29 +70,19 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:text="(734) 867 - 2345" />
-=======
-        android:id="@+id/textView2" />
->>>>>>> FETCH_HEAD
 
     <TextView
-        android:text="Phone Number -Provide your phone number so that other family members can find you"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginTop="5dp"
         android:text="Provide your phone number so that other family members can find you"
         android:textSize="11sp"
         android:id="@+id/textView5" />
-=======
-        android:id="@+id/textView3" />
->>>>>>> FETCH_HEAD
 
     <TextView
         android:text="Enter Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:text="Enter Password"
         android:textStyle="bold"
         android:id="@+id/txtPassword"
         android:layout_marginTop="20dp" />
@@ -122,16 +97,12 @@
         android:layout_marginTop="10dp"
         android:id="@+id/editxtPassword"
         android:text="999999" />
-=======
-        android:id="@+id/textView4" />
->>>>>>> FETCH_HEAD
+
 
     <TextView
         android:text="Confirm Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:text="Confirm Password"
         android:textStyle="bold"
         android:id="@+id/txtConfrimpassword"
         android:layout_marginTop="20dp" />
@@ -145,16 +116,12 @@
         android:layout_marginTop="10dp"
         android:id="@+id/editxtConfirmpassword"
         android:text="999999" />
-=======
-        android:id="@+id/textView5" />
->>>>>>> FETCH_HEAD
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:id="@+id/button"
-<<<<<<< HEAD
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
         android:textColor="#FFFFFF"
@@ -162,20 +129,5 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:onClick="AddMamilyMembers" />
-
-
-=======
-        android:layout_marginBottom="63dp"
-        android:background="#2A2E7B"
-        android:clickable="true"
-        android:onClick="openAddFamilyMember"
-        android:textColor="#ffffff"
-        android:paddingLeft="60dp"
-        android:paddingRight="60dp"
-        android:textAlignment="center"
-        android:enabled="true"
-        android:focusable="true"
-        android:layout_gravity="center"/>
->>>>>>> FETCH_HEAD
 
 </LinearLayout>
