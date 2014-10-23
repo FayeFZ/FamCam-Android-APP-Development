@@ -64,6 +64,10 @@
             android:name=".AddFamilyMembersAddressBook"
             android:label="@string/title_activity_add_family_members_address_book" >
         </activity>
+        <activity
+            android:name=".MakeProfile"
+            android:label="@string/title_activity_make_profile" >
+        </activity>
     </application>
 
 </manifest>

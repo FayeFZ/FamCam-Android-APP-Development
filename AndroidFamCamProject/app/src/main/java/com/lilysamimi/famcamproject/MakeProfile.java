@@ -8,18 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class NewUserLogin extends Activity {
+public class MakeProfile extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_user_login);
+        setContentView(R.layout.activity_make_profile);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.new_user_login, menu);
+        getMenuInflater().inflate(R.menu.make_profile, menu);
         return true;
     }
 
@@ -35,10 +36,9 @@ public class NewUserLogin extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void openMakeProfile (View view) {
-        Intent intent = new Intent(this, MakeProfile.class);
+    public void openAddFamily (View view) {
+        Intent intent = new Intent(this, AddFamilyMembers.class);
         startActivity(intent);
-        // When user clicks on Submit button, go to Make Profile page
+        // When user clicks on Submit button, go to Add Family Member page
     }
-
 }

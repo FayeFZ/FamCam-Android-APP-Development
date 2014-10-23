@@ -128,6 +128,6 @@
         android:background="#2A2E7B"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:onClick="openAddFamilyMembers" />
+        android:onClick="openMakeProfile" />
 
 </LinearLayout>
