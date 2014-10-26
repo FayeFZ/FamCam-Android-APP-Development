@@ -42,6 +42,7 @@ public class select_family extends Activity {
         return true;
     }
 
+    /* (save for action bar later)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -53,4 +54,5 @@ public class select_family extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    */
 }

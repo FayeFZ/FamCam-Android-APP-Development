@@ -24,6 +24,7 @@ public class Member2 extends Activity {
         return true;
     }
 
+    /* (save for ation bar later)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -35,6 +36,8 @@ public class Member2 extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    */
 
     //public void openRecord(View view) {
     // Intent intent = new Intent(this, Record.class);

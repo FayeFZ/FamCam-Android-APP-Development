@@ -24,6 +24,7 @@ public class AddFamilyMembersAddressBook extends Activity {
         return true;
     }
 
+    /* (save for action bar later)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -35,6 +36,7 @@ public class AddFamilyMembersAddressBook extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+    */
 
     public void openSearchAddress(View view) {
         Intent intent = new Intent(this, AddFamilyMembersAddressBook.class);
