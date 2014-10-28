@@ -68,6 +68,14 @@
             android:name=".MakeProfile"
             android:label="@string/title_activity_make_profile" >
         </activity>
+        <activity
+            android:name=".FamilyDetailActivity"
+            android:label="@string/title_activity_family_detail" >
+        </activity>
+        <activity
+            android:name=".FamilyDetailsActivity"
+            android:label="@string/title_activity_family_details" >
+        </activity>
     </application>
 
 </manifest>

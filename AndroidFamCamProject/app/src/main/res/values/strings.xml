@@ -17,5 +17,7 @@
     <string name="title_activity_member4">Member4</string>
     <string name="title_activity_add_family_members_address_book">AddFamilyMembersAddressBook</string>
     <string name="title_activity_make_profile">MakeProfile</string>
+    <string name="title_activity_family_detail">FamilyDetailActivity</string>
+    <string name="title_activity_family_details">FamilyDetailsActivity</string>
 
 </resources>
