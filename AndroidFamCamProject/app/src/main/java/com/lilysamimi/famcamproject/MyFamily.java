@@ -4,13 +4,22 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class MyFamily extends Activity {
@@ -18,11 +27,64 @@ public class MyFamily extends Activity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private ImageView mImageView;
 
+    // code for list view
+    public final static String EXTRA_MESSAGE = "com.lilysamimi.famcamproject.MESSAGE";
+
+    List<Map<String,String>> familyList = new ArrayList<Map<String,String>>();
+
+    //end
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_family);
+
+        //code for list view
+
+        registerForContextMenu((ListView) findViewById(R.id.listView));
+
+        initList();
+
+        ListView familyListView = (ListView) findViewById(R.id.listView);
+        SimpleAdapter simpleAdpter = new SimpleAdapter(this, familyList, android.R.layout.simple_list_item_1, new String[] {"family"}, new int[] {android.R.id.text1});
+        familyListView.setAdapter(simpleAdpter);
+
+        familyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openFamilyDetail(id);
+            }
+                });
+
+
+        //end
     }
+
+    // code for list view
+
+    private void initList() {
+        familyList.add(createFamily("family", "Family 1: John"));
+        familyList.add(createFamily("family", "Family 2: Tata"));
+        familyList.add(createFamily("family", "Family 3: Maria"));
+        familyList.add(createFamily("family", "Family 4: Joe"));
+    }
+
+    private HashMap<String,String> createFamily(String key,String name){
+        HashMap<String, String> family = new HashMap<String,String>();
+        family.put(key, name);
+        return family;
+    }
+
+    public void openFamilyDetail(long id) {
+        Intent intent = new Intent(this, FamilyDetailActivity.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE,message);
+        startActivity(intent);
+    }
+
+    // end
+
 
     public void dispatchTakePictureIntent(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
