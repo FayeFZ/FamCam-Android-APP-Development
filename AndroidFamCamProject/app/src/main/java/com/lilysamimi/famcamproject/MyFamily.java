@@ -24,30 +24,31 @@ import java.util.Map;
 
 public class MyFamily extends Activity {
 
+
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private ImageView mImageView;
 
-    // code for list view
+    /* code for list view    10/29/14 comment out for now
     public final static String EXTRA_MESSAGE = "com.lilysamimi.famcamproject.MESSAGE";
 
     List<Map<String,String>> familyList = new ArrayList<Map<String,String>>();
 
-    //end
+    end */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_family);
 
-        //code for list view
+        /*code for list view
 
         registerForContextMenu((ListView) findViewById(R.id.listView));
 
         initList();
 
         ListView familyListView = (ListView) findViewById(R.id.listView);
-        SimpleAdapter simpleAdpter = new SimpleAdapter(this, familyList, android.R.layout.simple_list_item_1, new String[] {"family"}, new int[] {android.R.id.text1});
-        familyListView.setAdapter(simpleAdpter);
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this, familyList, android.R.layout.simple_list_item_1, new String[] {"family"}, new int[] {android.R.id.text1});
+        familyListView.setAdapter(simpleAdapter);
 
         familyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -58,10 +59,10 @@ public class MyFamily extends Activity {
                 });
 
 
-        //end
+        end */
     }
 
-    // code for list view
+    /* code for list view
 
     private void initList() {
         familyList.add(createFamily("family", "Family 1: John"));
@@ -83,8 +84,9 @@ public class MyFamily extends Activity {
         startActivity(intent);
     }
 
-    // end
+    end */
 
+    // camera code
 
     public void dispatchTakePictureIntent(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -101,7 +103,6 @@ public class MyFamily extends Activity {
             mImageView.setImageBitmap(imageBitmap);
         }
     }
-
 
 
     @Override
@@ -131,6 +132,8 @@ public class MyFamily extends Activity {
         // When user clicks on record go to record screen
     //}
 
+
+
     public void openMember1(View view) {
         Intent intent = new Intent(this, Member1.class);
         startActivity(intent);
@@ -155,11 +158,15 @@ public void openMember4(View view) {
     }
     // When user clicks on Member4 image go to Member 4 profile screen
 
+
+
     public void openProfile(View view) {
         Intent intent = new Intent(this, profile.class);
         startActivity(intent);
     }
     // When user clicks on My Profile button go to my profile screen
+
+
 
 }
 

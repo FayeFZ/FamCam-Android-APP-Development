@@ -12,16 +12,16 @@ import java.util.ArrayList;
 
 public class FamilyDetailActivity extends Activity {
 
-    //code for list view
+    /* code for list view
     ArrayList familyList = new ArrayList<String>();
-    //end
+    end */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family_detail);
 
-    //code for list view
+    /*code for list view
         initList();
 
         Intent intent = getIntent();
@@ -34,17 +34,17 @@ public class FamilyDetailActivity extends Activity {
         textView.setText((Integer) familyList.get(id));
 
         setContentView(textView);
-    //end
+    end */
     }
 
-    //code for list view
+    /*code for list view
     private void initList(){
         familyList.add("Family 1");
         familyList.add("Family 2");
         familyList.add("Family 3");
         familyList.add("Family 4");
     }
-    //end
+    end */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
     }
     */
 
+
     public void openMyFamily(View view) {
         Intent intent = new Intent(this, MyFamily.class);
         startActivity(intent);
