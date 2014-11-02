@@ -138,26 +138,7 @@ public class MyFamily extends Activity {
         Intent intent = new Intent(this, Member1.class);
         startActivity(intent);
     }
-    // When user clicks on Member1 image go to Member 1 profile screen
-
-    public void openMember2(View view) {
-        Intent intent = new Intent(this, Member2.class);
-        startActivity(intent);
-    }
-    // When user clicks on Member2 image go to Member 2 profile screen
-
-    public void openMember3(View view) {
-        Intent intent = new Intent(this, Member3.class);
-        startActivity(intent);
-    }
-    // When user clicks on Member3 image go to Member3 profile screen
-
-public void openMember4(View view) {
-        Intent intent = new Intent(this, Member4.class);
-        startActivity(intent);
-    }
-    // When user clicks on Member4 image go to Member 4 profile screen
-
+    // When user clicks on member image go to appropriate member profile screen
 
 
     public void openProfile(View view) {

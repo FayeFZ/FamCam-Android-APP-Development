@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.lilysamimi.famcamproject.MyFamily"
     android:background="#ffffff"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:id="@+id/">
 
 
     <TextView
@@ -26,15 +27,15 @@
         android:layout_height="wrap_content"
         android:text="RECORD"
         android:id="@+id/button"
-        android:layout_alignTop="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:textColor="#FFFFFF"
         android:background="#64C73A"
         android:clickable="true"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:onClick="dispatchTakePictureIntent" />
+        android:onClick="dispatchTakePictureIntent"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignRight="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton2" />
     // onClick go to phone camera
 
     <Button
@@ -74,7 +75,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButton1"
         android:src="@drawable/man"
         android:clickable="true"
         android:layout_alignParentLeft="true"
@@ -85,35 +86,36 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/imageButton3"
+        android:src="@drawable/woman"
+        android:clickable="true"
+        android:onClick="openMember1"
+        android:layout_below="@+id/imageButton1"
+        android:layout_toLeftOf="@+id/imageButton2"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_marginTop="35dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:layout_toEndOf="@+id/imageButton1"
+        android:src="@drawable/woman"
+        android:layout_alignTop="@+id/imageButton1"
+        android:layout_toRightOf="@+id/imageButton1"
+        android:clickable="true"
+        android:onClick="openMember1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/imageButton4"
-        android:src="@drawable/woman"
-        android:clickable="true"
-        android:layout_below="@+id/imageButton3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="openMember3" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton5"
-        android:layout_toEndOf="@+id/imageButton3"
-        android:src="@drawable/woman"
-        android:layout_alignTop="@+id/imageButton3"
-        android:layout_toRightOf="@+id/imageButton3"
-        android:clickable="true"
-        android:onClick="openMember2" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton6"
         android:src="@drawable/man2"
-        android:layout_toEndOf="@+id/imageButton4"
+        android:layout_toEndOf="@+id/imageButton3"
         android:clickable="true"
-        android:layout_below="@+id/imageButton3"
-        android:layout_toRightOf="@+id/imageButton4"
-        android:onClick="openMember4" /><![CDATA[
+        android:onClick="openMember1"
+        android:layout_alignTop="@+id/imageButton3"
+        android:layout_toRightOf="@+id/imageButton3" /><![CDATA[
 
     >>>>>>> Stashed changes
 

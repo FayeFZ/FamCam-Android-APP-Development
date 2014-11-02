@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+
+import java.util.List;
 
 
 public class Member1 extends Activity {
@@ -43,6 +45,33 @@ public class Member1 extends Activity {
     // startActivity(intent);
     // When user clicks on Record button, open record
     //}
+
+   void populateImageArray() {
+       String[] images;
+       images[0] = "man.gif";
+       images[1] = "woman.gif";
+       images[2] = "woman2.gif";
+       images[3] = "man2.gif";
+   }
+
+    public void changeImage (View view) {
+        ImageView i = (ImageView) findViewById(R.id.)
+
+        if (view.getId() == R.id.imageButton1) {
+           getIntent(0);
+        }
+        else if (view.getId() == R.id.imageButton2) {
+            getIntent(1)
+        }
+        else if (view.getId() == R.id.imageButton3) {
+            getIntent(1)
+        }
+        else (view.getId() == R.id.imageButton4) {
+            getIntent(3)
+        }
+    }
+
+
 
     public void openMyFamily(View view) {
         Intent intent = new Intent(this, MyFamily.class);
