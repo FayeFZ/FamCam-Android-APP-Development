@@ -35,56 +35,70 @@ public class MyFamily extends Activity {
 
     end */
 
-  //  @Override
- //   protected void onCreate(Bundle savedInstanceState) {
-  //      super.onCreate(savedInstanceState);
-  //      setContentView(R.layout.activity_my_family);
+    @Override
+ protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_family);
 
-        /*code for list view
+        TextView t = (TextView) findViewById(R.id.testTextView);
 
-        registerForContextMenu((ListView) findViewById(R.id.listView));
+        t.setAllCaps(true);
 
-        initList();
-
-        ListView familyListView = (ListView) findViewById(R.id.listView);
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, familyList, android.R.layout.simple_list_item_1, new String[] {"family"}, new int[] {android.R.id.text1});
-        familyListView.setAdapter(simpleAdapter);
-
-        familyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
-                                    long id) {
-                openFamilyDetail(id);
-            }
-                });
-
-
-        end */
-  //  }
-
-    /* code for list view
-
-    private void initList() {
-        familyList.add(createFamily("family", "Family 1: John"));
-        familyList.add(createFamily("family", "Family 2: Tata"));
-        familyList.add(createFamily("family", "Family 3: Maria"));
-        familyList.add(createFamily("family", "Family 4: Joe"));
     }
 
-    private HashMap<String,String> createFamily(String key,String name){
-        HashMap<String, String> family = new HashMap<String,String>();
-        family.put(key, name);
-        return family;
+    public void changeColor(View view) {
+
+
+           TextView t = (TextView) findViewById(R.id.testTextView);
+
+
+
+               if(view.getId() == R.id.imageButton1){
+                       t.setText("green!");
+                   }
+               else if(view.getId() == R.id.imageButton2){
+                         t.setText("red!");
+                     }
+               else if(view.getId() == R.id.imageButton3) {
+            t.setText("white!");
+        }
+               else if(view.getId() == R.id.imageButton4) {
+                   t.setText("white!");
+               }
+
     }
 
-    public void openFamilyDetail(long id) {
-        Intent intent = new Intent(this, FamilyDetailActivity.class);
-        String message = String.valueOf(id);
-        intent.putExtra(EXTRA_MESSAGE,message);
+
+
+    //public void openRecord(View view) {
+    //Intent intent = new Intent(this, Record.class);
+    //startActivity(intent);
+    // When user clicks on record go to record screen
+    //}
+
+
+
+    public void openMember1(View view) {
+        Intent intent = new Intent(this, Member1.class);
         startActivity(intent);
     }
+    // When user clicks on Member1 image go to Member 1 profile screen
 
-    end */
+
+
+
+
+
+
+
+
+    public void openProfile(View view) {
+        Intent intent = new Intent(this, profile.class);
+        startActivity(intent);
+    }
+    // When user clicks on My Profile button go to my profile screen
+
+
 
     // camera code
 
@@ -103,80 +117,6 @@ public class MyFamily extends Activity {
             mImageView.setImageBitmap(imageBitmap);
         }
     }
-
-
- //   @Override
-  //  public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-  //      getMenuInflater().inflate(R.menu.my_family, menu);
-  //      return true;
- //   }
-
-    /* (save for action bar later)
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    */
-
-    //public void openRecord(View view) {
-    //Intent intent = new Intent(this, Record.class);
-    //startActivity(intent);
-    // When user clicks on record go to record screen
-    //}
-
-
-
-    public void openMember1(View view) {
-        Intent intent = new Intent(this, Member1.class);
-        startActivity(intent);
-    }
-    // When user clicks on Member1 image go to Member 1 profile screen
-
-    public void changeColor(View view) {
-
-
-
-               RelativeLayout l = (RelativeLayout) findViewById(R.id.MyFamily);
-
-
-              if(view.getId() == R.id.imageButton1){
-                   t.setText("green!");
-                      l.setBackgroundColor(Color.GREEN);
-                 }
-            else if(view.getId() == R.id.imageButton2){
-                        t.setText("red!");
-                      l.setBackgroundColor(Color.RED);
-                    }
-              else if(view.getId() == R.id.imageButton3) {
-                        t.setText("white!");
-                       l.setBackgroundColor(Color.WHITE);
-                   }
-              else if(view.getId() == R.id.imageButton4) {
-                  t.setText("white!");
-                  l.setBackgroundColor(Color.GREEN);
-              }
-
-
-           }
-
-
-
-    public void openProfile(View view) {
-        Intent intent = new Intent(this, profile.class);
-        startActivity(intent);
-    }
-    // When user clicks on My Profile button go to my profile screen
-
-
-
 }
 
 
