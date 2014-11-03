@@ -75,18 +75,7 @@ public class Member1 extends Activity {
 //        }
     //   }
 
-    List<String> familyList = new ArrayList<String>();
 
-    initList();
-
-    // Get the message from the intent
-    Intent intent = getIntent();
-    String message = intent.getStringExtra(OverviewActivity.EXTRA_MESSAGE);
-
-    int id = (int) Long.parseLong(message);
-
-    TextView textView = (TextView) findViewById(R.id.textView_familyName);
-    textView.setText(familyList.get(id));
 
 // I need a conditional statement here once the id is pulled correctly that displays a different name
    // depending on the button pushed.
