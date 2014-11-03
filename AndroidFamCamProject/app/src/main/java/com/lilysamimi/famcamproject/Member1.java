@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -46,31 +48,48 @@ public class Member1 extends Activity {
     // When user clicks on Record button, open record
     //}
 
-   void populateImageArray() {
-       String[] images;
-       images[0] = "man.gif";
-       images[1] = "woman.gif";
-       images[2] = "woman2.gif";
-       images[3] = "man2.gif";
-   }
 
-    public void changeImage (View view) {
-        ImageView i = (ImageView) findViewById(R.id.)
+    //I am commenting out the list way of adding strings as I try the method seen on teamavore...
+    //  void populateImageArray() {
+//       String[] images;
+//       images[0] = "man.gif";
+//       images[1] = "woman.gif";
+//       images[2] = "woman2.gif";
+//       images[3] = "man2.gif";
+    //  }
 
-        if (view.getId() == R.id.imageButton1) {
-           getIntent(0);
-        }
-        else if (view.getId() == R.id.imageButton2) {
-            getIntent(1)
-        }
-        else if (view.getId() == R.id.imageButton3) {
-            getIntent(1)
-        }
-        else (view.getId() == R.id.imageButton4) {
-            getIntent(3)
-        }
-    }
+    //   public void changeImage (View view) {
+    //       ImageView i = (ImageView) findViewById(R.id.)
 
+    //       if (view.getId() == R.id.imageButton1) {
+    //         getIntent(0);
+    //       }
+    //       else if (view.getId() == R.id.imageButton2) {
+    //           getIntent(1)
+//        }
+    //       else if (view.getId() == R.id.imageButton3) {
+    //           getIntent(1)
+//        }
+//        else (view.getId() == R.id.imageButton4) {
+    //           getIntent(3)
+//        }
+    //   }
+
+    List<String> familyList = new ArrayList<String>();
+
+    initList();
+
+    // Get the message from the intent
+    Intent intent = getIntent();
+    String message = intent.getStringExtra(OverviewActivity.EXTRA_MESSAGE);
+
+    int id = (int) Long.parseLong(message);
+
+    TextView textView = (TextView) findViewById(R.id.textView_familyName);
+    textView.setText(familyList.get(id));
+
+// I need a conditional statement here once the id is pulled correctly that displays a different name
+   // depending on the button pushed.
 
 
     public void openMyFamily(View view) {

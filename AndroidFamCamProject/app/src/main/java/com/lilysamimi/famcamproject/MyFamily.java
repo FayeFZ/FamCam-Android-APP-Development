@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -133,12 +134,76 @@ public class MyFamily extends Activity {
     //}
 
 
+    // taken from teamavore- the string variable apparently sends messages with intents
+    public final static String EXTRA_MESSAGE = "com.lilysamimi.famcamproject.MESSAGE";
+
+    //Creating an array in which we will store our list items- at least I think this is what this is doing...
+
+    List<Map<String, String>> familyList = new ArrayList<Map<String,String>>();
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_family);
+//This is again taken from teamavore, but I think this chooses what activity to pull ids from...in this case the my family activity
+
+        registerForContextMenu((ListView) findViewById(R.id.listView));
+
+        // This should be called to fill in the family list
+
+
+        TextView familyMemberName = (TextView) findViewById(R.id.ImageButtonView);
+        SimpleAdapter simpleAdpt = new SimpleAdapter(this, familyList, android.R.layout.simple_list_item_1, new String[] {"familyname"}, new int[] {android.R.id.text1});
+        familyMemberName.setAdapter(simpleAdpt);
+
+        // setOnItemClickListener tells the activity what to do when a list item is clicked on
+        familyMemberName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openFamilyNames(id);
+            }
+        });
+
+    //I have some serious problems above...all with the setAdapter and setOnItemClickListener...I don't know what to do with this...
+
+        private void initList() {
+            familyList.add(createName("familyName", "John"));
+            familyList.add(createName("familyName", "Grandma Tata"));
+            familyList.add(createName("familyName", "Mona"));
+            familyList.add(createName("familyName", "Billy"));
+
+        }
+    private HashMap<String, String> createName(String key, String name) {
+        HashMap<String, String> team = new HashMap<String, String>();
+        team.put(key, name);
+        return team;
+
+    }
+
+    public void openFamilyNames(long id) {
+        Intent intent = new Intent(this, Member1.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
 
     public void openMember1(View view) {
         Intent intent = new Intent(this, Member1.class);
         startActivity(intent);
     }
     // When user clicks on member image go to appropriate member profile screen
+
+
+
+
+
+
+
+
 
 
     public void openProfile(View view) {
