@@ -64,6 +64,14 @@
             android:name=".FamilyDetailsActivity"
             android:label="@string/title_activity_family_details" >
         </activity>
+        <activity
+            android:name=".ListviewMyFamily"
+            android:label="@string/title_activity_listview_my_family" >
+        </activity>
+        <activity
+            android:name=".ListviewFamilyDetail"
+            android:label="@string/title_activity_listview_family_detail" >
+        </activity>
     </application>
 
 </manifest>

@@ -31,6 +31,9 @@ import java.util.Map;
 public class MyFamily extends Activity {
 
 
+    //public final static String EXTRA_MESSAGE = "com.lilysamimi.famcamproject.MESSAGE";
+
+
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private ImageView mImageView;
 
@@ -49,10 +52,20 @@ public class MyFamily extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MyFamily.this, "" + position, Toast.LENGTH_SHORT).show();
+                //openFamilyDetail(id);
             }
         });
 
     }
+
+
+    /*code for open family detail
+    public void openFamilyDetail(long id){
+        Intent intent = new Intent(this,FamilyDetailActivity.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE,message);
+        startActivity(intent);
+    } */
 
     //code for grid view
 

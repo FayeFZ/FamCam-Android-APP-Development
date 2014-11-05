@@ -19,5 +19,7 @@
     <string name="title_activity_make_profile">MakeProfile</string>
     <string name="title_activity_family_detail">FamilyDetailActivity</string>
     <string name="title_activity_family_details">FamilyDetailsActivity</string>
+    <string name="title_activity_listview_my_family">ListviewMyFamily</string>
+    <string name="title_activity_listview_family_detail">ListviewFamilyDetail</string>
 
 </resources>

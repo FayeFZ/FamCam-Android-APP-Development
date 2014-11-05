@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 
 
     public void openMyFamily(View view) {
-        Intent intent = new Intent(this, MyFamily.class);
+        Intent intent = new Intent(this, ListviewMyFamily.class);
         startActivity(intent);
         // When user clicks on Start button go to My Family page
     }
