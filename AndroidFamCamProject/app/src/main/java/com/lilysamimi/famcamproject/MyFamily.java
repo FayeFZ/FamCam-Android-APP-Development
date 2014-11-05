@@ -3,6 +3,7 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
@@ -11,10 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,21 +39,38 @@ public class MyFamily extends Activity {
 
     List<Map<String,String>> familyList = new ArrayList<Map<String,String>>();
 
-    end */
+    //end */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_family);
 
+        //code for grid view
+
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MyFamily.this, "" + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         /*code for list view
 
-        registerForContextMenu((ListView) findViewById(R.id.listView));
+        //registerForContextMenu((ListView) findViewById(R.id.listView));
 
         initList();
 
         ListView familyListView = (ListView) findViewById(R.id.listView);
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, familyList, android.R.layout.simple_list_item_1, new String[] {"family"}, new int[] {android.R.id.text1});
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this,
+                familyList, android.R.layout.simple_list_item_1,
+                new String[] {"family"},
+                new int[] {android.R.id.text1});
+
         familyListView.setAdapter(simpleAdapter);
 
         familyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -59,8 +82,54 @@ public class MyFamily extends Activity {
                 });
 
 
-        end */
+        //end */
     }
+
+    //code for grid view
+
+    public class ImageAdapter extends BaseAdapter {
+        private Context mContext;
+
+        public ImageAdapter(Context context) {
+            mContext = context;
+        }
+
+        public int getCount() {
+            return mThumbIds.length;
+        }
+
+        public Object getItem(int position) {
+            return 0;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        //create a new ImageView for each item referenced by the Adapter
+
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ImageView imageView;
+            if (convertView == null){
+                imageView = new ImageView(mContext);
+                imageView.setLayoutParams(new GridView.LayoutParams(300,300));
+                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                imageView.setPadding(8,8,8,8);
+            }
+            else{
+                imageView = (ImageView) convertView;
+            }
+            imageView.setImageResource(mThumbIds[position]);
+            return imageView;
+        }
+
+        private Integer[] mThumbIds = {
+                R.drawable.man, R.drawable.woman,
+                R.drawable.man2, R.drawable.woman2
+        };
+    }
+
 
     /* code for list view
 
@@ -84,7 +153,7 @@ public class MyFamily extends Activity {
         startActivity(intent);
     }
 
-    end */
+   // end */
 
     // camera code
 
@@ -133,7 +202,7 @@ public class MyFamily extends Activity {
     //}
 
 
-
+    /*
     public void openMember1(View view) {
         Intent intent = new Intent(this, Member1.class);
         startActivity(intent);
@@ -158,7 +227,9 @@ public void openMember4(View view) {
     }
     // When user clicks on Member4 image go to Member 4 profile screen
 
+    */
 
+    /*
 
     public void openProfile(View view) {
         Intent intent = new Intent(this, profile.class);
@@ -166,7 +237,7 @@ public void openMember4(View view) {
     }
     // When user clicks on My Profile button go to my profile screen
 
-
+    */
 
 }
 
