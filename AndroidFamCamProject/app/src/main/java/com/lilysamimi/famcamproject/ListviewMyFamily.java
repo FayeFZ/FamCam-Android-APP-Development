@@ -2,13 +2,17 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,15 +22,75 @@ import java.util.Map;
 
 public class ListviewMyFamily extends Activity {
 
-    public final static String EXTRA_MESSAGE = "com.lilysamimi.famcamproject.MESSAGE";
+     public final static String EXTRA_MESSAGE = "com.lilysamimi.famcamproject.MESSAGE";
 
-    List<Map<String, String>> membersList = new ArrayList<Map<String,String>>();
+    // code for camera
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+     private ImageView mImageView;
+
+   // code for teamivore listview, we have images, so comment it out
+   // List<Map<String, String>> membersList = new ArrayList<Map<String,String>>();
+
+
+
+
+    //add names
+    String[] members = new String[]{
+            "Tata",
+            "John",
+            "Maria",
+            "Hill"
+    };
+
+    //add images
+
+    int[] images = new int[]{
+            R.drawable.man,
+            R.drawable.woman,
+            R.drawable.man2,
+            R.drawable.woman2
+    };
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview_my_family);
+
+        //Each row in the list stores member and images
+        List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
+
+        for (int i=0;i<4;i++){
+            HashMap<String,String> hm = new HashMap<String, String>();
+            hm.put("txt","member: " + members[i]);
+            hm.put("image",Integer.toString(images[i]));
+            aList.add(hm);
+        }
+
+        String[] from = {"image","txt"};
+
+        int[] to = {R.id.image,R.id.txt};
+
+        SimpleAdapter adapter = new SimpleAdapter(getBaseContext(),aList,R.layout.single_row,from,to);
+
+        ListView listView = (ListView) findViewById(R.id.listView);
+
+        listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openFamilyDetail(id);
+
+            }
+        });
+
+
+        /*  code for teamivore list view, no image, comment it out
 
         registerForContextMenu((ListView) findViewById(R.id.listView));
 
@@ -43,9 +107,12 @@ public class ListviewMyFamily extends Activity {
                 openFamilyDetail(id);
             }
         });
+        */
 
     }
 
+
+/* code for teamivore list view, no image, comment it out
     private void initList() {
         membersList.add(createMember("member", "Member 1: Tata"));
         membersList.add(createMember("member", "Member 2: John"));
@@ -58,6 +125,9 @@ public class ListviewMyFamily extends Activity {
         member.put(key, name);
         return member;
     }
+
+*/
+
 
     public void openFamilyDetail(long id) {
         Intent intent = new Intent(this, ListviewFamilyDetail.class);
@@ -85,5 +155,33 @@ public class ListviewMyFamily extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+    // code for open my profile
+
+    public void openProfile(View view) {
+        Intent intent = new Intent(this, profile.class);
+        startActivity(intent);
+    }
+
+    // camera code
+
+    public void dispatchTakePictureIntent(View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(takePictureIntent.resolveActivity(getPackageManager())!= null) {
+            startActivityForResult(takePictureIntent,REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mImageView.setImageBitmap(imageBitmap);
+        }
     }
 }

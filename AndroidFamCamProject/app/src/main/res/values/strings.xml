@@ -21,5 +21,6 @@
     <string name="title_activity_family_details">FamilyDetailsActivity</string>
     <string name="title_activity_listview_my_family">ListviewMyFamily</string>
     <string name="title_activity_listview_family_detail">ListviewFamilyDetail</string>
+    <string name="hello" />
 
 </resources>

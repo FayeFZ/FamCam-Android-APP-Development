@@ -45,7 +45,7 @@ public class AddFamilyMembersAddressBook extends Activity {
         // When user clicks on Add Grandchild or Grandparent, go to Add Family page
 
     public void openMyFamily(View view) {
-        Intent intent = new Intent(this, MyFamily.class);
+        Intent intent = new Intent(this, ListviewMyFamily.class);
         startActivity(intent);
         // When user clicks on Add Grandchild or Grandparent, go to Add Family page
     }

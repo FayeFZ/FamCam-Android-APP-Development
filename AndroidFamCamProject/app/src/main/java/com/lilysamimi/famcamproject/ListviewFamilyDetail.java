@@ -2,9 +2,11 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,6 +15,15 @@ import java.util.List;
 
 public class ListviewFamilyDetail extends Activity {
 
+/*
+    private void initList() {
+        membersList.add("Member 1: Tata");
+        membersList.add("Member 2: John");
+        membersList.add("Member 3: Maria");
+        membersList.add("Member 4: Hill");
+    }
+
+    List<String> membersList = new ArrayList<String>(); */
 
     private void initList() {
         membersList.add("Member 1: Tata");
@@ -23,10 +34,13 @@ public class ListviewFamilyDetail extends Activity {
 
     List<String> membersList = new ArrayList<String>();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview_family_detail);
+
 
         initList();
 
@@ -39,6 +53,7 @@ public class ListviewFamilyDetail extends Activity {
         TextView textView = new TextView(this);
         textView.setTextSize(40);
         textView.setText(membersList.get(id));
+
 
         // Set the text view as the activity layout
         setContentView(textView);

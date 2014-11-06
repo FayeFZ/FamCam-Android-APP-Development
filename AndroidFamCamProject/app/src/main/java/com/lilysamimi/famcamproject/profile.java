@@ -69,7 +69,7 @@ public class profile extends Activity {
    // }
 
     public void openMyFamily(View view) {
-        Intent intent = new Intent(this, MyFamily.class);
+        Intent intent = new Intent(this, ListviewMyFamily.class);
         startActivity(intent);
         // When user clicks on My Family button, go to My Family page
     }

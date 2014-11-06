@@ -5,6 +5,40 @@
     android:orientation="vertical"
     tools:context="com.lilysamimi.famcamproject.ListviewMyFamily">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Family"
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECORD"
+        android:id="@+id/button"
+        android:textColor="#FFFFFF"
+        android:background="#64C73A"
+        android:textSize="12dp"
+        android:clickable="true"
+        android:onClick="dispatchTakePictureIntent"
+        android:layout_gravity="right"
+        android:layout_marginBottom="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:id="@+id/button2"
+        android:textColor="#FFFFFF"
+        android:background="#2A2E7B"
+        android:textSize="12dp"
+        android:clickable="true"
+        android:onClick="openProfile"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="right"/>
+
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
