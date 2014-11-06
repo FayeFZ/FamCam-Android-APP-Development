@@ -72,6 +72,14 @@
             android:name=".ListviewFamilyDetail"
             android:label="@string/title_activity_listview_family_detail" >
         </activity>
+        <activity
+            android:name=".dialogFragment"
+            android:label="@string/title_activity_dialog_fragment" >
+        </activity>
+        <activity
+            android:name=".dialogFragment1"
+            android:label="@string/title_activity_dialog_fragment1" >
+        </activity>
     </application>
 
 </manifest>

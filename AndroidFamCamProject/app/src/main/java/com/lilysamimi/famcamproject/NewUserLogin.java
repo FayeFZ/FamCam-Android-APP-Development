@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.app.FragmentManager;
 
 
 public class NewUserLogin extends Activity {
@@ -14,6 +14,17 @@ public class NewUserLogin extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user_login);
+
+        FragmentManager fm = getFragmentManager();
+        TestDialog testDialog = new TestDialog();
+        testDialog.setRetainInstance(true);
+        testDialog.show(fm, "fragment_name");
+
+
+        // I inserted the code above to add the fragment to this screen.- Mike
+
+
+
     }
 
     @Override
@@ -42,5 +53,9 @@ public class NewUserLogin extends Activity {
         startActivity(intent);
         // When user clicks on Submit button, go to Make Profile page
     }
+
+
+
+
 
 }

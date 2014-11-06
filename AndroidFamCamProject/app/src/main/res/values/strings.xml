@@ -21,6 +21,8 @@
     <string name="title_activity_family_details">FamilyDetailsActivity</string>
     <string name="title_activity_listview_my_family">ListviewMyFamily</string>
     <string name="title_activity_listview_family_detail">ListviewFamilyDetail</string>
-    <string name="hello" />
+    <string name="hello"></string>
+    <string name="title_activity_dialog_fragment">dialogFragment</string>
+    <string name="title_activity_dialog_fragment1">dialogFragment1</string>
 
 </resources>
