@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 public class FragmentAccessAddress extends DialogFragment {
 
-    public TestDialog() {
+    public FragmentAccessAddress() {
         // Empty constructor required for DialogFragment
     }
 

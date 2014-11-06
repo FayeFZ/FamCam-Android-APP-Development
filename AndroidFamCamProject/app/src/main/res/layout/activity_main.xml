@@ -54,6 +54,7 @@
     android:enabled="true"
     android:focusable="true"
     android:layout_gravity="center"
-    android:layout_weight="0.11" />
+    android:layout_weight="0.11"
+    android:textSize="30dp" />
 
     </LinearLayout>
