@@ -20,10 +20,10 @@ public class AddFamilyMembers extends Activity {
         setContentView(R.layout.activity_add_family_members);
 
 
-        FragmentManager fm = getFragmentManager();
-        TestDialog testDialog = new TestDialog();
-        testDialog.setRetainInstance(true);
-        testDialog.show(fm, "fragment_name");
+
+
+
+
     }
 
 
@@ -65,8 +65,16 @@ public class AddFamilyMembers extends Activity {
     // When user clicks on finish, go to My Family page
 
     public void openAddFamilyAddress(View view) {
-        Intent intent= new Intent(this, AddFamilyMembersAddressBook.class);
-        startActivity(intent);
+
+
+        //Intent intent= new Intent(this, AddFamilyMembersAddressBook.class);
+        //startActivity(intent);
+        //Commented out intent and replaced with dialog fragment.
+
+        FragmentManager fm = getFragmentManager();
+        FragmentAccessAddress testDialog = new FragmentAccessAddress();
+        testDialog.setRetainInstance(true);
+        testDialog.show(fm, "Confirm Access");
     };
 
 }

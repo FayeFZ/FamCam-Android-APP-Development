@@ -3,6 +3,7 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -52,9 +53,14 @@ public class SettingsActivity extends Activity {
     }
 
     public void openMain(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        // When user clicks on Logout, go to Main Activity
+        //Intent intent = new Intent(this, MainActivity.class);
+       // startActivity(intent);
+        // replacing this with dialog fragment
+
+        FragmentManager fm = getFragmentManager();
+        FragmentLogout testDialog = new FragmentLogout();
+        testDialog.setRetainInstance(true);
+        testDialog.show(fm, "Confirm Logout");
     }
 
 }
