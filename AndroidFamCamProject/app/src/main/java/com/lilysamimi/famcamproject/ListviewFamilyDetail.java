@@ -26,11 +26,12 @@ public class ListviewFamilyDetail extends Activity {
     List<String> membersList = new ArrayList<String>(); */
 
     private void initList() {
-        membersList.add("Member 1: Tata");
-        membersList.add("Member 2: John");
-        membersList.add("Member 3: Maria");
-        membersList.add("Member 4: Hill");
+        membersList.add("Grandma Tata");
+        membersList.add("Grandpa John");
+        membersList.add("Maria");
+        membersList.add("Edgar");
     }
+
 
     List<String> membersList = new ArrayList<String>();
 

@@ -24,6 +24,7 @@ public class NewUserLogin extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user_login);
 
+<<<<<<< HEAD
     // code for alert dialogfragment -- fei
      // When you click on the button submit, it will pop up and you can choose
 
@@ -40,9 +41,12 @@ public class NewUserLogin extends Activity {
         TestDialog testDialog = new TestDialog();
         testDialog.setRetainInstance(true);
         testDialog.show(fm, "fragment_name");
+=======
+>>>>>>> FETCH_HEAD
 
         */
 
+<<<<<<< HEAD
         // I inserted the code above to add the fragment to this screen.- Mike
     }
 
@@ -53,6 +57,8 @@ public class NewUserLogin extends Activity {
         newFragment.show(getFragmentManager(), "dialog");
     }
 
+=======
+>>>>>>> FETCH_HEAD
 
     public void doPositiveClick() {
         Intent intent = new Intent(this, MakeProfile.class);
@@ -126,9 +132,19 @@ public class NewUserLogin extends Activity {
 
     /*
     public void openMakeProfile (View view) {
-        Intent intent = new Intent(this, MakeProfile.class);
-        startActivity(intent);
-        // When user clicks on Submit button, go to Make Profile page
+        //Intent intent = new Intent(this, MakeProfile.class);
+        //startActivity(intent);
+        // Commented out the intent that used to be here and replaced it with the dialog fragment
+
+
+        FragmentManager fm = getFragmentManager();
+        TestDialog testDialog = new TestDialog();
+        testDialog.setRetainInstance(true);
+        testDialog.show(fm, "Confirm Information");
+
+
+        // I inserted the code above to add the fragment to this screen.- Mike
+
     }
     */
 

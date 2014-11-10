@@ -36,10 +36,10 @@ public class ListviewMyFamily extends Activity {
 
     //add names
     String[] members = new String[]{
-            "Tata",
-            "John",
+            "Grandma Tata",
+            "Grandpa John",
             "Maria",
-            "Hill"
+            "Edgar"
     };
 
     //add images
@@ -64,7 +64,7 @@ public class ListviewMyFamily extends Activity {
 
         for (int i=0;i<4;i++){
             HashMap<String,String> hm = new HashMap<String, String>();
-            hm.put("txt","member: " + members[i]);
+            hm.put("txt","" + members[i]);
             hm.put("image",Integer.toString(images[i]));
             aList.add(hm);
         }

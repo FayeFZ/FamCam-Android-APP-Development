@@ -4,7 +4,8 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context="com.lilysamimi.famcamproject.ListviewMyFamily"
-    android:onClick="openProfile">
+    android:onClick="openProfile"
+    android:background="#ffffff">
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +32,6 @@
             android:onClick="openProfile"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:layout_alignParentLeft="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp" />
@@ -57,10 +57,15 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:textAlignment="gravity"
+        android:smoothScrollbar="true"
+        android:stackFromBottom="true"
+        android:background="#ffffff"
+        android:layout_gravity="center"
+        android:minHeight="500dp"
+        android:paddingLeft="20dp">
     </ListView>
 
 </LinearLayout>
