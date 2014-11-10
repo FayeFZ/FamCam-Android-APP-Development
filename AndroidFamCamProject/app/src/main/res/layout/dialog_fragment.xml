@@ -1,12 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/edit_name"
+android:id="@+id/test_dialog"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:layout_gravity="center"
 android:orientation="vertical" >
 
 <TextView
-    android:id="@+id/lbl_your_name"
+    android:id="@+id/textview_confirm"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Is your information correct?" />
@@ -14,18 +14,22 @@ android:orientation="vertical" >
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yes"
-        android:id="@+id/button2"
-        android:layout_toStartOf="@+id/button"
+        android:text="ok"
+        android:id="@+id/ok"
+        android:onClick="dismiss"
+
         android:textColor="#FFFFFF"
         android:background="#2A2E7B"
         android:clickable="true"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:onClick="openMakeProfile"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:enabled="false" />
+
+
+
 
 </LinearLayout>

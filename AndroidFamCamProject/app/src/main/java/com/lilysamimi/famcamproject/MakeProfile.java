@@ -41,4 +41,5 @@ public class MakeProfile extends Activity {
         startActivity(intent);
         // When user clicks on Submit button, go to Add Family Member page
     }
+
 }

@@ -21,7 +21,7 @@ public class AddFamilyMembers extends Activity {
 
 
         FragmentManager fm = getFragmentManager();
-        TestDialog testDialog = new TestDialog();
+        FragmentAccessAddress testDialog = new FragmentAccessAddress();
         testDialog.setRetainInstance(true);
         testDialog.show(fm, "fragment_name");
     }

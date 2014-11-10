@@ -24,5 +24,6 @@
     <string name="hello"></string>
     <string name="title_activity_dialog_fragment">dialogFragment</string>
     <string name="title_activity_dialog_fragment1">dialogFragment1</string>
+    <string name="alert_dialog_two_buttons_title">Is the information correct?</string>
 
 </resources>

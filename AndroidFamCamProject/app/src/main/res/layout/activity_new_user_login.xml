@@ -119,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
         android:textColor="#FFFFFF"
