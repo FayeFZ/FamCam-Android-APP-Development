@@ -90,7 +90,7 @@ public class ListviewMyFamily extends Activity {
         });
 
 
-        /*  code for teamivore list view, no image, comment it out
+        /*  code for Teamivore list view, no image, comment it out
 
         registerForContextMenu((ListView) findViewById(R.id.listView));
 

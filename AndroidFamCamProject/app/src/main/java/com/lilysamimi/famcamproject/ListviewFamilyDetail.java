@@ -4,12 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -33,7 +37,11 @@ public class ListviewFamilyDetail extends Activity {
     }
 
 
+
     List<String> membersList = new ArrayList<String>();
+
+
+
 
 
 
@@ -44,6 +52,10 @@ public class ListviewFamilyDetail extends Activity {
 
 
         initList();
+
+
+
+
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(ListviewMyFamily.EXTRA_MESSAGE);
@@ -56,10 +68,12 @@ public class ListviewFamilyDetail extends Activity {
         textView.setText(membersList.get(id));
 
 
+
+
         // Set the text view as the activity layout
         setContentView(textView);
-    }
 
+    }
 
 
     @Override

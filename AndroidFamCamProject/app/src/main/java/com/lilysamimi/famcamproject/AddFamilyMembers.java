@@ -52,7 +52,6 @@ public class AddFamilyMembers extends Activity {
     }
 
     public void doNegativeClick() {
-        // Do stuff here.
         Log.i("FamCamProject", "Negative click!");
     }
 
