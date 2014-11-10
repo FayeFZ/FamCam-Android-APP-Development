@@ -27,11 +27,7 @@ public class TestDialog extends DialogFragment {
         return view;
 
 
-<<<<<<< HEAD
-=======
 }
 
 
-
->>>>>>> FETCH_HEAD
 }
