@@ -3,12 +3,18 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class SettingsActivity extends Activity {
 
@@ -16,8 +22,66 @@ public class SettingsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        Button button = (Button) findViewById(R.id.logout);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
     }
 
+    void showDialog() {
+        DialogFragment newFragment = LogoutDialogFragment
+                .newInstance(R.string.Logout_dialog_two_buttons_title);
+        newFragment.show(getFragmentManager(), "dialog");
+    }
+
+    public void doPositiveClick() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        Log.i("FamCamProject", "Positive click!");
+    }
+
+    public void doNegativeClick() {
+        // Do stuff here.
+        Log.i("FamCamProject", "Negative click!");
+    }
+
+    public static class LogoutDialogFragment extends DialogFragment {
+
+        public static LogoutDialogFragment newInstance(int title) {
+            LogoutDialogFragment frag = new LogoutDialogFragment();
+            Bundle args = new Bundle();
+            args.putInt("title", title);
+            frag.setArguments(args);
+            return frag;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            int title = getArguments().getInt("title");
+
+            return new AlertDialog.Builder(getActivity())
+                    .setTitle(title)
+                    .setPositiveButton(R.string.Logout_dialog_yes,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int whichButton) {
+                                    ((SettingsActivity) getActivity())
+                                            .doPositiveClick();
+                                }
+                            })
+                    .setNegativeButton(R.string.Logout_dialog_cancel,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int whichButton) {
+                                    ((SettingsActivity) getActivity())
+                                            .doNegativeClick();
+                                }
+                            }).create();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,6 +116,8 @@ public class SettingsActivity extends Activity {
         // When user clicks on New User, go to New User Login page
     }
 
+   /* now we have dialog to ask if they are sure to log out
+
     public void openMain(View view) {
         //Intent intent = new Intent(this, MainActivity.class);
        // startActivity(intent);
@@ -62,6 +128,8 @@ public class SettingsActivity extends Activity {
         testDialog.setRetainInstance(true);
         testDialog.show(fm, "Confirm Logout");
     }
+
+    */
 
 }
 

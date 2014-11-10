@@ -28,5 +28,8 @@
     <string name="alert_dialog_address_book_buttons_title">FamCam will now access your address book to add family members. Is this OK?</string>
     <string name="alert_dialog_cancel">CANCEL</string>
     <string name="alert_dialog_ok">OK</string>
+    <string name="Logout_dialog_two_buttons_title">Are you sure you want to logout?</string>
+    <string name="Logout_dialog_yes">YES</string>
+    <string name="Logout_dialog_cancel">CANCEL</string>
 
 </resources>
