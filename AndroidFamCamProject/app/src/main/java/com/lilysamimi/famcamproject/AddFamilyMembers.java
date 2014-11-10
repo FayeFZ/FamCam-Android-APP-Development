@@ -4,12 +4,18 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class AddFamilyMembers extends Activity {
@@ -19,13 +25,70 @@ public class AddFamilyMembers extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_family_members);
 
+        Button button = (Button) findViewById(R.id.add_from_address_book);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
 
+        /*
         FragmentManager fm = getFragmentManager();
         FragmentAccessAddress testDialog = new FragmentAccessAddress();
         testDialog.setRetainInstance(true);
-        testDialog.show(fm, "fragment_name");
+        testDialog.show(fm, "fragment_name");*/
+    }
 
+    void showDialog() {
+        DialogFragment newFragment = AddressBookAlertDialogFragment
+                .newInstance(R.string.alert_dialog_address_book_buttons_title);
+        newFragment.show(getFragmentManager(), "dialog");
+    }
 
+    public void doPositiveClick() {
+        Intent intent = new Intent(this, AddFamilyMembersAddressBook.class);
+        startActivity(intent);
+        Log.i("FamCamProject", "Positive click!");
+    }
+
+    public void doNegativeClick() {
+        // Do stuff here.
+        Log.i("FamCamProject", "Negative click!");
+    }
+
+    public static class AddressBookAlertDialogFragment extends DialogFragment {
+
+        public static AddressBookAlertDialogFragment newInstance(int title) {
+            AddressBookAlertDialogFragment frag = new AddressBookAlertDialogFragment();
+            Bundle args = new Bundle();
+            args.putInt("title", title);
+            frag.setArguments(args);
+            return frag;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            int title = getArguments().getInt("title");
+
+            return new AlertDialog.Builder(getActivity())
+                    .setTitle(title)
+                    .setPositiveButton(R.string.alert_dialog_ok,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int whichButton) {
+                                    ((AddFamilyMembers) getActivity())
+                                            .doPositiveClick();
+                                }
+                            })
+                    .setNegativeButton(R.string.alert_dialog_cancel,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int whichButton) {
+                                    ((AddFamilyMembers) getActivity())
+                                            .doNegativeClick();
+                                }
+                            }).create();
+        }
     }
 
 
@@ -73,10 +136,10 @@ public class AddFamilyMembers extends Activity {
         //startActivity(intent);
         //Commented out intent and replaced with dialog fragment.
 
-        FragmentManager fm = getFragmentManager();
-        FragmentAccessAddress testDialog = new FragmentAccessAddress();
-        testDialog.setRetainInstance(true);
-        testDialog.show(fm, "Confirm Access");
+       // FragmentManager fm = getFragmentManager();
+       // FragmentAccessAddress testDialog = new FragmentAccessAddress();
+       // testDialog.setRetainInstance(true);
+       // testDialog.show(fm, "Confirm Access");
     };
 
 }

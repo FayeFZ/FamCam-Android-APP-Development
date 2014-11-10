@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADD FROM ADDRESS BOOK"
-        android:id="@+id/button"
+        android:id="@+id/add_from_address_book"
         android:background="#64C73A"
         android:paddingLeft="5dp"
         android:paddingTop="20dp"
