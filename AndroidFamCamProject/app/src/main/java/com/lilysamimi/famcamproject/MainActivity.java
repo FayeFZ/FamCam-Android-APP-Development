@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,9 +46,9 @@ public class MainActivity extends Activity {
         startActivity(intent);
         // When user clicks on Start button go to My Family page
 
-        SharedPreferences mySharedPreferences = getSharedPreferences(MY_PREFS, Activity.MODE_PRIVATE);
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor usernameText = mySharedPreferences.edit();
-        SharedPreferences.Editor usernameText = usernameText.putString(“Username”, “Grandma Tata”);
+        usernameText.putString("Username", "Grandma Tata");
         usernameText.apply();
         // saves username so that it can be shown on Profile page
     }

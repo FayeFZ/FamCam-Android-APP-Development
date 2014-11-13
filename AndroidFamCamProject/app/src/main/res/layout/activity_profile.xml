@@ -7,8 +7,7 @@
     android:background="#ffffff"
     android:padding="20dp">
 
-    <?xml version="1.0" encoding="utf-8"?>
-        <Button
+     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RECORD"
