@@ -39,7 +39,6 @@ public class MainActivity extends Activity {
     }
     */
 
-
     public void openMyFamily(View view) {
         Intent intent = new Intent(this, ListviewMyFamily.class);
         startActivity(intent);

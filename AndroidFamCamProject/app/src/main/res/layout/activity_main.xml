@@ -34,27 +34,49 @@
         android:id="@+id/imageView"
         android:layout_below="@+id/action_settings"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="20dp"
         android:background="#D51E4D"
         android:src="@drawable/logo" />
 
-<Button
-    android:layout_width="245dp"
-    android:layout_height="wrap_content"
-    android:text="START"
-    android:id="@+id/start"
-    android:layout_marginBottom="63dp"
-    android:background="#2A2E7B"
-    android:clickable="true"
-    android:onClick="openMyFamily"
-    android:textColor="#ffffff"
-    android:paddingLeft="60dp"
-    android:paddingRight="60dp"
-    android:textAlignment="center"
-    android:enabled="true"
-    android:focusable="true"
-    android:layout_gravity="center"
-    android:layout_weight="0.11"
-    android:textSize="30dp" />
+<EditText
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:id="@+id/usernameText"
+        android:text="Username"
+        android:padding="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="#ffffff"
+        android:longClickable="true" />
 
-    </LinearLayout>
+<EditText
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:id="@+id/passwordText"
+        android:text="Password"
+        android:padding="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="#ffffff"
+    android:longClickable="true" />
+
+<Button
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/start"
+        android:layout_marginBottom="63dp"
+        android:background="#2A2E7B"
+        android:clickable="true"
+        android:onClick="openMyFamily"
+        android:textColor="#ffffff"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:textAlignment="center"
+        android:enabled="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:layout_weight="0.11"
+        android:textSize="30dp" />
+
+</LinearLayout>
