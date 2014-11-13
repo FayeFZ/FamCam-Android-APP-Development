@@ -4,13 +4,16 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
 
 
 public class profile extends Activity {
@@ -22,6 +25,16 @@ public class profile extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        SharedPreferences mySharedPreferences = getSharedPreferences(MY_PREFS, Activity.MODE_PRIVATE);
+        String usernameText = mySharedPreferences.getString("Username", "");
+        Button RECORD = (Button) findViewById(R.id.button);
+            if (usernameText == "Grandma Tata") {
+                RECORD.setVisibility(View.VISIBLE);
+            }
+            else {
+                RECORD.setVisibility(View.GONE);
+            }
     }
 
     public void dispatchTakePictureIntent(View view) {

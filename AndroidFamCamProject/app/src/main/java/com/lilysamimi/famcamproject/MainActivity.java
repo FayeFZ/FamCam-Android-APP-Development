@@ -4,6 +4,7 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,6 +44,12 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, ListviewMyFamily.class);
         startActivity(intent);
         // When user clicks on Start button go to My Family page
+
+        SharedPreferences mySharedPreferences = getSharedPreferences(MY_PREFS, Activity.MODE_PRIVATE);
+        SharedPreferences.Editor usernameText = mySharedPreferences.edit();
+        SharedPreferences.Editor usernameText = usernameText.putString(“Username”, “Grandma Tata”);
+        usernameText.apply();
+        // saves username so that it can be shown on Profile page
     }
 
     public void openSettings(View view){

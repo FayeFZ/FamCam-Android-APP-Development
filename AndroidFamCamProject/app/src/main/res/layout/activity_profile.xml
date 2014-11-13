@@ -7,19 +7,20 @@
     android:background="#ffffff"
     android:padding="20dp">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RECORD"
-        android:id="@+id/button"
-        android:textColor="#FFFFFF"
-        android:background="#64C73A"
-        android:clickable="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:onClick="dispatchTakePictureIntent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <?xml version="1.0" encoding="utf-8"?>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECORD"
+            android:id="@+id/button"
+            android:textColor="#FFFFFF"
+            android:background="#64C73A"
+            android:clickable="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:onClick="dispatchTakePictureIntent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -57,7 +58,6 @@
         android:layout_height="wrap_content"
         android:text="My Family"
         android:id="@+id/button2"
-        android:layout_toStartOf="@+id/button"
         android:textColor="#FFFFFF"
         android:background="#2A2E7B"
         android:clickable="true"
