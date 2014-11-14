@@ -2,13 +2,16 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -58,6 +61,24 @@ public class ListviewMyFamily extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview_my_family);
+
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String usernameText = mySharedPreferences.getString("Username", "");
+        Button RECORD = (Button) findViewById(R.id.button);
+        if (usernameText == "Grandma Tata") {
+            RECORD.setVisibility(View.VISIBLE);
+        }
+        else {
+            RECORD.setVisibility(View.GONE);
+        }
+
+        //Mike- Hey Lily, I added the shared preferences that were located in profile here so that it affected if the
+        //record button was on or off on the main landing page.  However, this still doesn't seem to be pulling the user entered
+        //text from the textview "userNameText"... Right now the "RECORD" is just always gone, so it is understanding
+        // the if statement as false.  I think we need something that pulls the text from there
+        //with something like you have for the record button "findViewById(R.id.userNameText" and use this in the main shared
+        //preferences in the "MainActivity" java.  I am also not sure if the sharedpreferences in MainActivity java should be
+        //housed in "onCreate".  So many questions...
 
         //Each row in the list stores member and images
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
