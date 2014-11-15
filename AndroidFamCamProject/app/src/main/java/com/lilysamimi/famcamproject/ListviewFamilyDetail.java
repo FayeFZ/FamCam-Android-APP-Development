@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,15 +20,8 @@ import java.util.List;
 
 public class ListviewFamilyDetail extends Activity {
 
-/*
-    private void initList() {
-        membersList.add("Member 1: Tata");
-        membersList.add("Member 2: John");
-        membersList.add("Member 3: Maria");
-        membersList.add("Member 4: Hill");
-    }
 
-    List<String> membersList = new ArrayList<String>(); */
+
 
     private void initList() {
         membersList.add("Grandma Tata");
@@ -36,12 +30,17 @@ public class ListviewFamilyDetail extends Activity {
         membersList.add("Edgar");
     }
 
-
-
     List<String> membersList = new ArrayList<String>();
 
+    private void inList() {
 
+        array_image.add(R.drawable.man);
+        array_image.add(R.drawable.woman);
+        array_image.add(R.drawable.man2);
+        array_image.add(R.drawable.woman2);
+    }
 
+    ArrayList<Integer> array_image = new ArrayList<Integer>();
 
 
 
@@ -52,9 +51,7 @@ public class ListviewFamilyDetail extends Activity {
 
 
         initList();
-
-
-
+        inList();
 
 
         Intent intent = getIntent();
@@ -62,18 +59,20 @@ public class ListviewFamilyDetail extends Activity {
 
         int id = (int) Long.parseLong(message);
 
-        // Create the text view
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
+        //create the text view
+
+        TextView textView=(TextView)findViewById(R.id.txt);
+
         textView.setText(membersList.get(id));
 
+        //create the image view
 
+        ImageView imageView=(ImageView)findViewById(R.id.img);
 
-
-        // Set the text view as the activity layout
-        setContentView(textView);
+        imageView.setImageResource(array_image.get(id));
 
     }
+
 
 
     @Override
