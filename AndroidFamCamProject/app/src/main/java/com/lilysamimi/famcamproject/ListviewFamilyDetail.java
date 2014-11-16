@@ -32,6 +32,15 @@ public class ListviewFamilyDetail extends Activity {
 
     List<String> membersList = new ArrayList<String>();
 
+    private void intheList() {
+        description.add("Love cooking for my family :D");
+        description.add("I want to go fishing!");
+        description.add("Looking forward to Christmas");
+        description.add("Watching football game");
+    }
+
+    List<String> description = new ArrayList<String>();
+
     private void inList() {
 
         array_image.add(R.drawable.man);
@@ -52,6 +61,7 @@ public class ListviewFamilyDetail extends Activity {
 
         initList();
         inList();
+        intheList();
 
 
         Intent intent = getIntent();
@@ -64,6 +74,10 @@ public class ListviewFamilyDetail extends Activity {
         TextView textView=(TextView)findViewById(R.id.txt);
 
         textView.setText(membersList.get(id));
+
+        TextView descriptions=(TextView)findViewById(R.id.des);
+
+        descriptions.setText(description.get(id));
 
         //create the image view
 
@@ -92,5 +106,11 @@ public class ListviewFamilyDetail extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openMyFamily(View view) {
+        Intent intent = new Intent(this, ListviewMyFamily.class);
+        startActivity(intent);
+        // When user clicks on My Family button, go to My Family page
     }
 }

@@ -1,6 +1,9 @@
 <!-- This page was created by Michael Grisafe Sorry Guys, I can't figure out how to get the program to render text input when I drag that widget onto the design screen.  Currently text input left out. -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -152,4 +155,6 @@
         android:layout_gravity="center"
         android:onClick="openMakeProfile" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

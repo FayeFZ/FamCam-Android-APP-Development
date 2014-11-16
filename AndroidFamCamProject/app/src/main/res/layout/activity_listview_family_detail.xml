@@ -19,6 +19,26 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/img"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/des"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Family"
+        android:id="@+id/button2"
+        android:textColor="#FFFFFF"
+        android:background="#2A2E7B"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:onClick="openMyFamily"
+        android:layout_gravity="center"
+        android:layout_marginTop="220dp"
+        />
 
 
 </LinearLayout>
