@@ -65,13 +65,10 @@ public class ListviewMyFamily extends Activity {
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString("Username", "");
         Button RECORD = (Button) findViewById(R.id.button);
-        if (usernameText == "Grandma Tata") {
+        if (usernameText.equals( "Grandma Tata")) {
             RECORD.setVisibility(View.VISIBLE);
         }
-        else {
-            RECORD.setVisibility(View.GONE);
-        }
-
+   
         //Mike- Hey Lily, I added the shared preferences that were located in profile here so that it affected if the
         //record button was on or off on the main landing page.  However, this still doesn't seem to be pulling the user entered
         //text from the textview "userNameText"... Right now the "RECORD" is just always gone, so it is understanding
