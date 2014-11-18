@@ -45,25 +45,22 @@
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:id="@+id/usernameText"
-    android:padding="10dp"
+        android:padding="10dp"
         android:layout_marginBottom="30dp"
         android:background="#ffffff"
         android:longClickable="true"
-    android:linksClickable="true"
-    android:focusable="false"
-    android:editable="false"
-    android:hint="Username" />
+        android:hint="Username" />
 
 <EditText
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:id="@+id/passwordText"
-    android:padding="10dp"
+        android:padding="10dp"
         android:layout_marginBottom="30dp"
         android:background="#ffffff"
-    android:longClickable="true"
-    android:hint="Password" />
+        android:longClickable="true"
+        android:hint="Password" />
 
 <Button
         android:layout_width="245dp"

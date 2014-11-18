@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 
-
 public class profile extends Activity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -30,7 +29,7 @@ public class profile extends Activity {
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString("Username", "");
         Button RECORD = (Button) findViewById(R.id.button);
-            if (usernameText == "Grandma Tata") {
+            if (usernameText.equals("Grandma Tata")) {
                 RECORD.setVisibility(View.VISIBLE);
             }
             else {
