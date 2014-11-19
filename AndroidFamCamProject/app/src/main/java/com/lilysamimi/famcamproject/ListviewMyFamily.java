@@ -64,30 +64,20 @@ public class ListviewMyFamily extends Activity {
 
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString("Username", "");
-        Button RECORD = (Button) findViewById(R.id.button);
-        if (usernameText.equals( "Grandma Tata")) {
-            RECORD.setVisibility(View.VISIBLE);
-        }
-        else {
-            RECORD.setVisibility(View.GONE);
-        }
-        //Mike- Hey Lily, I added the shared preferences that were located in profile here so that it affected if the
-        //record button was on or off on the main landing page.  However, this still doesn't seem to be pulling the user entered
-        //text from the textview "userNameText"... Right now the "RECORD" is just always gone, so it is understanding
-        // the if statement as false.  I think we need something that pulls the text from there
-        //with something like you have for the record button "findViewById(R.id.userNameText" and use this in the main shared
-        //preferences in the "MainActivity" java.  I am also not sure if the sharedpreferences in MainActivity java should be
-        //housed in "onCreate".  So many questions...
+        Button button = (Button) findViewById(R.id.button);
+            if (usernameText == "Grandma Tata") button.setVisibility(View.VISIBLE);
+            else button.setVisibility(View.GONE);
 
-        //Each row in the list stores member and images
+
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
-
-        for (int i=0;i<4;i++){
+        for (int i=0;i<4; i++) {
             HashMap<String,String> hm = new HashMap<String, String>();
             hm.put("txt","" + members[i]);
             hm.put("image",Integer.toString(images[i]));
             aList.add(hm);
         }
+
+        //Each row in the list stores member and images
 
         String[] from = {"image","txt"};
 
