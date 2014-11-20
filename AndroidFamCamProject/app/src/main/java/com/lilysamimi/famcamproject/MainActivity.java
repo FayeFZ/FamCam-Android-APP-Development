@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
         Editor editor = sharedpreferences.edit();
         editor.putString(Name,n);
 
-        editor.commit();
+        editor.apply();
     }
 
     //end of the save name function
@@ -76,6 +76,9 @@ public class MainActivity extends Activity {
     */
 
     public void openMyFamily(View view) {
+
+        run(view);
+
         Intent intent = new Intent(this, ListviewMyFamily.class);
         startActivity(intent);
         // When user clicks on Start button go to My Family page
@@ -95,6 +98,7 @@ public class MainActivity extends Activity {
     }
 
     public void openSettings(View view){
+
     Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
         // When user clicks on Settings button go to Settings page
