@@ -31,16 +31,17 @@ public class MainActivity extends Activity {
 
 
      //code for save the name
-        name = (TextView)findViewById(R.id.editTextName);
+        name = (EditText)findViewById(R.id.editTextName);
 
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        //We should always use getDefaultSharedPreferences unless we want to separate our shared preferences files.
+        sharedpreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         if (sharedpreferences.contains(Name)){
             name.setText(sharedpreferences.getString(Name,""));
         }
 
     }
-
+// when run is called the name in edit text view is put to shared preferences
     public void run(View view){
         String n = name.getText().toString();
         Editor editor = sharedpreferences.edit();

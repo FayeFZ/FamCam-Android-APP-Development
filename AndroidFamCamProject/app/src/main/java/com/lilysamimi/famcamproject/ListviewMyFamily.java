@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -54,8 +55,9 @@ public class ListviewMyFamily extends Activity {
             R.drawable.woman2
     };
 
-
-
+//Name is a variable that is needs to defined locally on each page.  Once it is defined we can
+    //use it in the code later
+    public static final String Name = "nameKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +65,16 @@ public class ListviewMyFamily extends Activity {
         setContentView(R.layout.activity_listview_my_family);
 
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String usernameText = mySharedPreferences.getString("Username", "");
+        String usernameText = mySharedPreferences.getString(Name, "");
         Button button = (Button) findViewById(R.id.button);
-            if (usernameText == "Grandma Tata") button.setVisibility(View.VISIBLE);
+            if (usernameText.equals("aa")) button.setVisibility(View.VISIBLE);
             else button.setVisibility(View.GONE);
 
+        //I'm testing this code to see if I can pull the name entered on the login screen at the
+        //top of the app's screen here.
+
+        TextView textView= (TextView) findViewById(R.id.replaceName);
+        textView.setText(usernameText+ "'s");
 
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
         for (int i=0;i<4; i++) {
