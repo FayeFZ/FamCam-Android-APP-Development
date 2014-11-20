@@ -20,7 +20,6 @@ import android.widget.TextView;
 
 public class profile extends Activity {
 
-    TextView name;
     public static final String MyPREFERENCES ="MyPrefs";
     public static final String Name = "nameKey";
 
@@ -55,6 +54,8 @@ public class profile extends Activity {
         else {
             RECORD.setVisibility(View.INVISIBLE);
         }
+
+        //end of retrieve the name
 
 
     }
