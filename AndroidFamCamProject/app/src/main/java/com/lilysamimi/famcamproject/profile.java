@@ -3,6 +3,7 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -14,9 +15,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class profile extends Activity {
+
+    TextView name;
+    public static final String MyPREFERENCES ="MyPrefs";
+    public static final String Name = "nameKey";
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private ImageView mImageView;
@@ -26,7 +32,7 @@ public class profile extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        /*SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString("Username", "");
         Button RECORD = (Button) findViewById(R.id.button);
             if (usernameText.equals("Grandma Tata")) {
@@ -34,7 +40,23 @@ public class profile extends Activity {
             }
             else {
                 RECORD.setVisibility(View.GONE);
-            }
+            } */
+
+
+       //retrieve the name
+
+        Button RECORD = (Button) findViewById(R.id.button_record);
+        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        String name = (sharedpreferences.getString(Name,""));
+
+        if (name.equals("aa")){
+            RECORD.setVisibility(View.VISIBLE);
+        }
+        else {
+            RECORD.setVisibility(View.INVISIBLE);
+        }
+
+
     }
 
     public void dispatchTakePictureIntent(View view) {
@@ -86,5 +108,6 @@ public class profile extends Activity {
         startActivity(intent);
         // When user clicks on My Family button, go to My Family page
     }
+
 
 }

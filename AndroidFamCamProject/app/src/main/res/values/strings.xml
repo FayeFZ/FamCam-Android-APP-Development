@@ -31,5 +31,6 @@
     <string name="Logout_dialog_two_buttons_title">Are you sure you want to logout?</string>
     <string name="Logout_dialog_yes">YES</string>
     <string name="Logout_dialog_cancel">CANCEL</string>
+    <string name="name">Name</string>
 
 </resources>
