@@ -5,4 +5,10 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
+
+    <item android:id="@+id/addfamily"
+        android:title="Dude, where's my family?"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
 </menu>
