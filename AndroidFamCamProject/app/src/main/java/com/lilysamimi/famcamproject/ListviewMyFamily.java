@@ -18,6 +18,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -168,6 +169,8 @@ public class ListviewMyFamily extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+
         if (id == R.id.action_settings) {
             return true;
         }

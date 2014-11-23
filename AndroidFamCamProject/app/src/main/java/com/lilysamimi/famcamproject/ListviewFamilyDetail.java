@@ -96,16 +96,48 @@ public class ListviewFamilyDetail extends Activity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+
         if (id == R.id.action_settings) {
             return true;
         }
+        else if (id == R.id.myProfile) {
+            myProfile();
+            return true;
+        }
+        else if (id == R.id.myFamily){
+            listMyFamily();
+            return true;
+        }
+
+        else if (id == R.id.logout){
+            logout();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void listMyFamily() {
+        Intent intent = new Intent (this, ListviewMyFamily.class);
+        startActivity(intent);
+    }
+
+    public void myProfile() {
+        Intent intent = new Intent (this, profile.class);
+        startActivity(intent);
+    }
+
+
+    public void logout() {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void openMyFamily(View view) {
