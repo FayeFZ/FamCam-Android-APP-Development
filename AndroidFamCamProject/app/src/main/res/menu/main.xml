@@ -1,14 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity" >
-    <item android:id="@+id/action_settings"
+
+ <!--  <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:showAsAction="never" /> -->
 
 
-    <item android:id="@+id/addfamily"
-        android:title="Dude, where's my family?"
+    <item android:id="@+id/myFamily"
+        android:title="My Family"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
+    <item android:id="@+id/myProfile"
+        android:title="My Profile"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+
 </menu>

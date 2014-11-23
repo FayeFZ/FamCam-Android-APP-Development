@@ -44,16 +44,11 @@ public class profile extends Activity {
 
        //retrieve the name
 
-        Button RECORD = (Button) findViewById(R.id.button_record);
-        SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        String name = (sharedpreferences.getString(Name,""));
-
-        if (name.equals("aa")){
-            RECORD.setVisibility(View.VISIBLE);
-        }
-        else {
-            RECORD.setVisibility(View.INVISIBLE);
-        }
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String usernameText = mySharedPreferences.getString(Name, "");
+        Button button = (Button) findViewById(R.id.button_record);
+        if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
+        else button.setVisibility(View.GONE);
 
         //end of retrieve the name
 
@@ -84,7 +79,7 @@ public class profile extends Activity {
         return true;
     }
 
-    /* (save for action bar later)
+    //(save for action bar later)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -94,10 +89,38 @@ public class profile extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+
+                else if (id == R.id.myProfile) {
+            myProfile();
+            return true;
+        }
+        else if (id == R.id.myFamily){
+            listMyFamily();
+            return true;
+        }
+
+        else if (id == R.id.logout){
+            logout();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
-    */
 
+    public void listMyFamily() {
+        Intent intent = new Intent (this, ListviewMyFamily.class);
+        startActivity(intent);
+    }
+
+    public void myProfile() {
+        Intent intent = new Intent (this, profile.class);
+        startActivity(intent);
+    }
+
+
+    public void logout() {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+    }
    // public void openRecord(View view) {
        // Intent intent = new Intent(this, Record.class);
        // startActivity(intent);

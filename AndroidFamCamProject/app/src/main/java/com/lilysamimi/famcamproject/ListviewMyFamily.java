@@ -67,7 +67,7 @@ public class ListviewMyFamily extends Activity {
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString(Name, "");
         Button button = (Button) findViewById(R.id.button);
-            if (usernameText.equals("aa")) button.setVisibility(View.VISIBLE);
+            if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
             else button.setVisibility(View.GONE);
 
         //I'm testing this code to see if I can pull the name entered on the login screen at the
@@ -171,10 +171,37 @@ public class ListviewMyFamily extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+        else if (id == R.id.myProfile) {
+            myProfile();
+            return true;
+        }
+        else if (id == R.id.myFamily){
+            listMyFamily();
+            return true;
+        }
+
+        else if (id == R.id.logout){
+            logout();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
+public void listMyFamily() {
+    Intent intent = new Intent (this, ListviewMyFamily.class);
+    startActivity(intent);
+}
 
+    public void myProfile() {
+        Intent intent = new Intent (this, profile.class);
+        startActivity(intent);
+    }
+
+
+    public void logout() {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+    }
 
 
     // code for open my profile
