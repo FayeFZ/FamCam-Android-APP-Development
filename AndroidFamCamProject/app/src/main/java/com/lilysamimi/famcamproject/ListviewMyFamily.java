@@ -68,8 +68,10 @@ public class ListviewMyFamily extends Activity {
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString(Name, "");
         Button button = (Button) findViewById(R.id.button);
-            if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
-            else button.setVisibility(View.GONE);
+           // if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
+          //  else button.setVisibility(View.GONE);
+
+
 
         //I'm testing this code to see if I can pull the name entered on the login screen at the
         //top of the app's screen here.
@@ -210,8 +212,18 @@ public void listMyFamily() {
     // code for open my profile
 
     public void openProfile(View view) {
-        Intent intent = new Intent(this, profile.class);
-        startActivity(intent);
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String usernameText = mySharedPreferences.getString(Name, "");
+
+        if (usernameText.equals("Grandma Tata")) {
+            Intent intent = new Intent(this, profile.class);
+            startActivity(intent);
+        }
+
+        else {
+            Intent intent = new Intent(this, ChildrenProfile.class);
+            startActivity(intent);
+        }
     }
 
     // camera code
@@ -233,9 +245,12 @@ public void listMyFamily() {
         }
     }
 
+
+
+
     public void openAddFamilyMember(View view) {
         Intent intent = new Intent(this, AddFamilyMembers.class);
         startActivity(intent);
+        }
         // When user clicks on Add Grandchild or Grandparent, go to Add Family page
-    }
 }
