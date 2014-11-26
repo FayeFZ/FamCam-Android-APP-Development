@@ -17,16 +17,7 @@
         android:layout_height="wrap_content"
         android:text="X's Name"
         android:id="@+id/replaceName"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Family"
-        android:id="@+id/textView"
-        android:textSize="30dp"
+        android:textSize="22dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp" />
 
@@ -72,7 +63,7 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:textAlignment="gravity"
         android:smoothScrollbar="true"
         android:stackFromBottom="true"

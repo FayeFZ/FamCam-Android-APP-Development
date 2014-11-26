@@ -77,7 +77,7 @@ public class ListviewMyFamily extends Activity {
         //top of the app's screen here.
 
         TextView textView= (TextView) findViewById(R.id.replaceName);
-        textView.setText(usernameText+ "'s");
+        textView.setText(usernameText+ "'s Family");
 
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
         for (int i=0;i<4; i++) {
