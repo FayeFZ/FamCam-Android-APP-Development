@@ -72,7 +72,7 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:textAlignment="gravity"
         android:smoothScrollbar="true"
         android:stackFromBottom="true"

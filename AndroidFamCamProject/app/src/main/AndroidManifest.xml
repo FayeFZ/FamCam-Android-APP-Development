@@ -80,6 +80,10 @@
             android:name=".dialogFragment1"
             android:label="@string/title_activity_dialog_fragment1" >
         </activity>
+        <activity
+            android:name=".ChildrenProfile"
+            android:label="@string/title_activity_children_profile" >
+        </activity>
     </application>
 
 </manifest>
