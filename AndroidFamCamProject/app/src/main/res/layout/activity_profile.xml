@@ -66,6 +66,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image_camera"
+        android:scaleType="center"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/image_cd_camera"/>
 
 </LinearLayout>

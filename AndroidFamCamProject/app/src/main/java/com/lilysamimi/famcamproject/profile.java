@@ -30,10 +30,16 @@ import java.io.File;
 
 public class profile extends Activity {
 
-    //code for camera
+    /*//code for camera
     private static String logtag ="CameraProfile";
     private static int TAKE_PICTURE =1;
     private Uri imageUri;
+    //end*/
+
+    //code for cam22
+    Button btnTakePhoto;
+    ImageView imgTakenPhoto;
+    private  static final int CAM_REQUEST = 1313;
     //end
 
     public static final String MyPREFERENCES ="MyPrefs";
@@ -48,9 +54,17 @@ public class profile extends Activity {
         setContentView(R.layout.activity_profile);
 
 
-        //code for camera dec
+       /* //code for camera dec
         Button cameraButton = (Button)findViewById(R.id.button_camera);
+
         cameraButton.setOnClickListener(cameraListener);
+
+        //end */
+        //code for cam22
+       btnTakePhoto = (Button)findViewById(R.id.button_camera);
+        imgTakenPhoto=(ImageView)findViewById(R.id.image_camera);
+
+        btnTakePhoto.setOnClickListener(new btnTakePhotoClicker());
 
         //end
 
@@ -79,7 +93,28 @@ public class profile extends Activity {
     }
 
 
-    //code for camera new thanksgiving
+    //code for cam method 2
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode,Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == CAM_REQUEST){
+            Bitmap thumbnail = (Bitmap)data.getExtras().get("data");
+            imgTakenPhoto.setImageBitmap(thumbnail);
+        }
+    }
+
+    class btnTakePhotoClicker implements Button.OnClickListener{
+        @Override
+        public void onClick(View v){
+            Intent cameraintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraintent,CAM_REQUEST);
+        }
+    }
+
+    //end
+
+    /*//code for camera new thanksgiving
 
     private View.OnClickListener cameraListener = new View.OnClickListener(){
         public void onClick(View v){
@@ -118,7 +153,7 @@ public class profile extends Activity {
         }
     }
 
-    //end
+    //end */
 
 
     
