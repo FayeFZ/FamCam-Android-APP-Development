@@ -98,9 +98,9 @@ public class MainActivity extends Activity {
 
     }
 
-    public void openSettings(View view){
+    public void openNewUser(View view){
 
-    Intent intent = new Intent(this, SettingsActivity.class);
+    Intent intent = new Intent(this, NewUserLogin.class);
         startActivity(intent);
         // When user clicks on Settings button go to Settings page
     }

@@ -17,9 +17,9 @@
     android:focusableInTouchMode="false">
 
 <Button
-        android:id="@+id/action_settings"
-        android:text="Settings"
-        android:onClick="openSettings"
+        android:id="@+id/new_registration"
+        android:text="New User"
+        android:onClick="openNewUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#666666"
