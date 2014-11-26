@@ -223,6 +223,7 @@ public void listMyFamily() {
         }
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
@@ -230,5 +231,11 @@ public void listMyFamily() {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageView.setImageBitmap(imageBitmap);
         }
+    }
+
+    public void openAddFamilyMember(View view) {
+        Intent intent = new Intent(this, AddFamilyMembers.class);
+        startActivity(intent);
+        // When user clicks on Add Grandchild or Grandparent, go to Add Family page
     }
 }

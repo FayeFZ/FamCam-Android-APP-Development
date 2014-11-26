@@ -1,7 +1,12 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.lilysamimi.famcamproject.ListviewMyFamily"
     android:onClick="openProfile"
@@ -73,8 +78,26 @@
         android:stackFromBottom="true"
         android:background="#ffffff"
         android:layout_gravity="center"
-        android:minHeight="500dp"
+        android:minHeight="800dp"
         android:paddingLeft="20dp">
     </ListView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD FAMILY MEMBER"
+        android:id="@+id/button_add"
+        android:textColor="#FFFFFF"
+        android:background="#00AEEF"
+        android:textSize="20dp"
+        android:clickable="true"
+        android:onClick="openAddFamilyMember"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp" />
+
 </LinearLayout>
+
+</ScrollView>
