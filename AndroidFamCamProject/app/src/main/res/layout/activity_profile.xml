@@ -11,7 +11,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="RECORD"
-            android:id="@+id/button_record"
+            android:id="@+id/button_camera"
             android:textColor="#FFFFFF"
             android:background="#64C73A"
             android:clickable="true"
@@ -20,6 +20,7 @@
             android:onClick="dispatchTakePictureIntent"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -51,6 +52,13 @@
         android:layout_toRightOf="@+id/imageView"
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_camera"
+        android:contentDescription="@string/image_cd_camera"/>
+
 
     <Button
         android:layout_width="wrap_content"

@@ -3,22 +3,38 @@
 package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+
 
 
 public class profile extends Activity {
+
+    //code for camera
+    private static String logtag ="CameraProfile";
+    private static int TAKE_PICTURE =1;
+    private Uri imageUri;
+    //end
 
     public static final String MyPREFERENCES ="MyPrefs";
     public static final String Name = "nameKey";
@@ -30,6 +46,13 @@ public class profile extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+
+        //code for camera dec
+        Button cameraButton = (Button)findViewById(R.id.button_camera);
+        cameraButton.setOnClickListener(cameraListener);
+
+        //end
 
         /*SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString("Username", "");
@@ -46,7 +69,7 @@ public class profile extends Activity {
 
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString(Name, "");
-        Button button = (Button) findViewById(R.id.button_record);
+        Button button = (Button) findViewById(R.id.button_camera);
         if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
         else button.setVisibility(View.GONE);
 
@@ -54,6 +77,52 @@ public class profile extends Activity {
 
 
     }
+
+
+    //code for camera new thanksgiving
+
+    private View.OnClickListener cameraListener = new View.OnClickListener(){
+        public void onClick(View v){
+            takePhoto(v);
+        }
+    };
+
+    private void takePhoto(View v){
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        File photo = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"picture.jpg");
+        imageUri = Uri.fromFile(photo);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+        startActivityForResult(intent,TAKE_PICTURE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode,Intent intent) {
+        super.onActivityResult(requestCode,resultCode,intent);
+
+        if(resultCode == Activity.RESULT_OK){
+            Uri selectedImage = imageUri;
+            getContentResolver().notifyChange(selectedImage,null);
+
+            ImageView imageView = (ImageView)findViewById(R.id.image_camera);
+            ContentResolver cr = getContentResolver();
+            Bitmap bitmap;
+
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(cr,selectedImage);
+                imageView.setImageBitmap(bitmap);
+                Toast.makeText(profile.this,selectedImage.toString(),Toast.LENGTH_LONG).show();
+
+            } catch (Exception e){
+                Log.e(logtag,e.toString());
+            }
+        }
+    }
+
+    //end
+
+
+    
+/* old camera code (still work but can't save the picture
 
     public void dispatchTakePictureIntent(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -69,7 +138,7 @@ public class profile extends Activity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageView.setImageBitmap(imageBitmap);
         }
-    }
+    }*/
 
 
     @Override

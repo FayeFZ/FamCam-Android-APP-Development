@@ -32,5 +32,6 @@
     <string name="Logout_dialog_yes">YES</string>
     <string name="Logout_dialog_cancel">CANCEL</string>
     <string name="name">Name</string>
+    <string name="image_cd_camera">This is a generic content description</string>
 
 </resources>
