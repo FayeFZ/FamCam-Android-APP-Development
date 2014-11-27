@@ -67,9 +67,9 @@ public class ListviewMyFamily extends Activity {
 
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString(Name, "");
-        Button button = (Button) findViewById(R.id.button);
-           // if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
-          //  else button.setVisibility(View.GONE);
+        Button button_add = (Button) findViewById(R.id.button_add);
+            if (usernameText.equals("Grandma Tata")) button_add.setVisibility(View.VISIBLE);
+           else button_add.setVisibility(View.GONE);
 
 
 

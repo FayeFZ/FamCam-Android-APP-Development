@@ -81,11 +81,13 @@ public class profile extends Activity {
 
        //retrieve the name
 
-        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String usernameText = mySharedPreferences.getString(Name, "");
-        Button button = (Button) findViewById(R.id.button_camera);
-        if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
-        else button.setVisibility(View.GONE);
+     //   SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    //    String usernameText = mySharedPreferences.getString(Name, "");
+     //   Button button = (Button) findViewById(R.id.button_camera);
+     //   if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
+    //    else button.setVisibility(View.GONE);
+
+        //I'm commenting out this portion above because the record button should always show, even for kids. -Mike
 
         //end of retrieve the name
 
