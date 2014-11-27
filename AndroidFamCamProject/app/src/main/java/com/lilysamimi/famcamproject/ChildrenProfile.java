@@ -12,9 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class ChildrenProfile extends Activity {
+
+
+
 
     //code for cam22
     Button btnTakePhoto;
@@ -43,9 +47,12 @@ public class ChildrenProfile extends Activity {
 
         SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String usernameText = mySharedPreferences.getString(Name, "");
-        Button button = (Button) findViewById(R.id.button_camera);
-        if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
-        else button.setVisibility(View.GONE);
+        //Button button = (Button) findViewById(R.id.button_camera);
+       // if (usernameText.equals("Grandma Tata")) button.setVisibility(View.VISIBLE);
+        //else button.setVisibility(View.GONE);
+
+        TextView textView= (TextView) findViewById(R.id.childName);
+        textView.setText(usernameText+ "'s Family");
 
         //end of retrieve the name
 

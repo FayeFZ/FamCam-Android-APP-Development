@@ -51,8 +51,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Timi"
-        android:id="@+id/textView"
+        android:text="Timmmy"
+        android:id="@+id/childName"
         android:textSize="22dp"
         android:layout_gravity="center"/>
 
