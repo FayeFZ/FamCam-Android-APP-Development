@@ -15,9 +15,11 @@
         android:showAsAction="never" />
 
     <item android:id="@+id/myProfile"
-        android:title="My Profile"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+    android:title="My Profile"
+    android:orderInCategory="100"
+    android:showAsAction="never" />
+
+
 
     <item android:id="@+id/logout"
         android:title="Logout"

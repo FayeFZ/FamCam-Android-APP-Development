@@ -71,10 +71,20 @@ public class ListviewMyFamily extends Activity {
             if (usernameText.equals("Grandma Tata")) button_add.setVisibility(View.VISIBLE);
            else button_add.setVisibility(View.GONE);
 
+       // Button profile_1 = (Button) findViewById(R.id.myProfile1);
+      //  Button profile_2 = (Button) findViewById(R.id.myProfile2);
+      //  if (usernameText.equals("Grandma Tata"))
+       //         profile_1.setVisibility(View.VISIBLE);
+       // else
+       // profile_1.setVisibility(View.GONE);
+       // if (usernameText.equals("Grandma Tata"))
+        //    profile_2.setVisibility(View.GONE);
+      //  else
+       //     profile_1.setVisibility(View.VISIBLE);
+        //I was trying to set up a conditional where if grandma tata is entered only one of the
+        //profile options shows up in the dropdown.
 
 
-        //I'm testing this code to see if I can pull the name entered on the login screen at the
-        //top of the app's screen here.
 
         TextView textView= (TextView) findViewById(R.id.replaceName);
         textView.setText(usernameText+ "'s Family");
@@ -163,6 +173,9 @@ public class ListviewMyFamily extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.listview_my_family, menu);
         return true;
+
+
+
     }
 
     @Override
@@ -173,6 +186,8 @@ public class ListviewMyFamily extends Activity {
         int id = item.getItemId();
 
 
+
+
         if (id == R.id.action_settings) {
             return true;
         }
@@ -180,6 +195,8 @@ public class ListviewMyFamily extends Activity {
             myProfile();
             return true;
         }
+
+
         else if (id == R.id.myFamily){
             listMyFamily();
             return true;
@@ -193,14 +210,25 @@ public class ListviewMyFamily extends Activity {
     }
 
 public void listMyFamily() {
+
+    SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    String usernameText = mySharedPreferences.getString(Name, "");
+    Button button_add = (Button) findViewById(R.id.button_add);
+    if (usernameText.equals("Grandma Tata")) button_add.setVisibility(View.VISIBLE);
+    else button_add.setVisibility(View.GONE);
+
+
     Intent intent = new Intent (this, ListviewMyFamily.class);
     startActivity(intent);
 }
 
     public void myProfile() {
+
+
         Intent intent = new Intent (this, profile.class);
         startActivity(intent);
     }
+
 
 
     public void logout() {

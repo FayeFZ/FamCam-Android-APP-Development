@@ -8,15 +8,7 @@
         android:showAsAction="never" /> -->
 
 
-    <item android:id="@+id/myFamily"
-        android:title="My Family"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
 
-    <item android:id="@+id/myProfile"
-        android:title="My Profile"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
 
 
 </menu>

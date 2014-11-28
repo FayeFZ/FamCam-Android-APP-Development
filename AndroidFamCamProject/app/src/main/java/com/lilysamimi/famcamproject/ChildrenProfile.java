@@ -119,7 +119,7 @@ public class ChildrenProfile extends Activity {
     }
 
     public void myProfile() {
-        Intent intent = new Intent (this, profile.class);
+        Intent intent = new Intent (this, ChildrenProfile.class);
         startActivity(intent);
     }
 
