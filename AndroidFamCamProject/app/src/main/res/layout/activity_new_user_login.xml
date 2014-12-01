@@ -88,6 +88,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Enter your age"
+        android:textStyle="bold"
+        android:id="@+id/textAge"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Provide your age so that we can make sure you get the appropriate information"
+        android:textSize="11sp"
+        android:id="@+id/textView6" />
+
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editxtAge"
+        android:background="#bcf4ff"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Enter a username"
         android:textStyle="bold"
         android:id="@+id/textUsername"
