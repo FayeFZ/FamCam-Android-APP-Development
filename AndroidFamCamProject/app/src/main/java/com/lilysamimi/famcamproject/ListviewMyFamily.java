@@ -225,8 +225,20 @@ public void listMyFamily() {
     public void myProfile() {
 
 
-        Intent intent = new Intent (this, profile.class);
-        startActivity(intent);
+        //Intent intent = new Intent (this, profile.class);
+        //startActivity(intent);
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+               String usernameText = mySharedPreferences.getString(Name, "");
+
+                        if (usernameText.equals("Grandma Tata")) {
+                        Intent intent = new Intent(this, profile.class);
+                        startActivity(intent);
+                    }
+
+                        else {
+                       Intent intent = new Intent(this, ChildrenProfile.class);
+                       startActivity(intent);
+                    }
     }
 
 
