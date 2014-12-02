@@ -39,7 +39,7 @@ public class AddFamilyMembers extends Activity {
         testDialog.show(fm, "fragment_name");*/
     }
 
-    void showDialog() {
+  public void showDialog() {
         DialogFragment newFragment = AddressBookAlertDialogFragment
                 .newInstance(R.string.alert_dialog_address_book_buttons_title);
         newFragment.show(getFragmentManager(), "dialog");
@@ -48,11 +48,11 @@ public class AddFamilyMembers extends Activity {
     public void doPositiveClick() {
         Intent intent = new Intent(this, AddFamilyMembersAddressBook.class);
         startActivity(intent);
-        Log.i("FamCamProject", "Positive click!");
+        //Log.i("FamCamProject", "Positive click!");
     }
 
     public void doNegativeClick() {
-        Log.i("FamCamProject", "Negative click!");
+        //Log.i("FamCamProject", "Negative click!");
     }
 
     public static class AddressBookAlertDialogFragment extends DialogFragment {

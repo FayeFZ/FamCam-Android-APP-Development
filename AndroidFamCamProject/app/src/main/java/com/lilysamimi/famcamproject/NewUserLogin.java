@@ -58,11 +58,11 @@ public class NewUserLogin extends Activity {
     public void doPositiveClick() {
         Intent intent = new Intent(this, MakeProfile.class);
         startActivity(intent);
-        Log.i("FamCamProject", "Positive click!");
+        //Log.i("FamCamProject", "Positive click!");
     }
 
     public void doNegativeClick() {
-        Log.i("FamCamProject", "Negative click!");
+        //Log.i("FamCamProject", "Negative click!");
     }
 
     public static class MyAlertDialogFragment extends DialogFragment{
