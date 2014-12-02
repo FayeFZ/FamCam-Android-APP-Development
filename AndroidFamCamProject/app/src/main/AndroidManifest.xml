@@ -70,7 +70,7 @@
         </activity>
         <activity
             android:name=".ListviewFamilyDetail"
-            android:label="@string/title_activity_listview_family_detail" >
+            android:label="My Family" >
         </activity>
         <activity
             android:name=".dialogFragment"

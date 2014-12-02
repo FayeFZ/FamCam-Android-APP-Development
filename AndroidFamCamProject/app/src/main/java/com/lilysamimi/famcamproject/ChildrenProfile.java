@@ -52,7 +52,7 @@ public class ChildrenProfile extends Activity {
         //else button.setVisibility(View.GONE);
 
         TextView textView= (TextView) findViewById(R.id.childName);
-        textView.setText(usernameText+ "'s Family");
+        textView.setText(usernameText+ "'s Profile");
 
         //end of retrieve the name
 
@@ -119,8 +119,7 @@ public class ChildrenProfile extends Activity {
     }
 
     public void myProfile() {
-        Intent intent = new Intent (this, ChildrenProfile.class);
-        startActivity(intent);
+
     }
 
 

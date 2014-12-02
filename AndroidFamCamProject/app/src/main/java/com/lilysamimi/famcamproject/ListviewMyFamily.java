@@ -209,17 +209,15 @@ public class ListviewMyFamily extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void logout() {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+    }
+
 public void listMyFamily() {
 
-    SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-    String usernameText = mySharedPreferences.getString(Name, "");
-    Button button_add = (Button) findViewById(R.id.button_add);
-    if (usernameText.equals("Grandma Tata")) button_add.setVisibility(View.VISIBLE);
-    else button_add.setVisibility(View.GONE);
 
-
-    Intent intent = new Intent (this, ListviewMyFamily.class);
-    startActivity(intent);
 }
 
     public void myProfile() {
@@ -243,10 +241,7 @@ public void listMyFamily() {
 
 
 
-    public void logout() {
-        Intent intent = new Intent (this, MainActivity.class);
-        startActivity(intent);
-    }
+
 
 
     // code for open my profile

@@ -2,8 +2,10 @@ package com.lilysamimi.famcamproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +23,7 @@ import java.util.List;
 public class ListviewFamilyDetail extends Activity {
 
 
-
+    public static final String Name = "nameKey";
 
     private void initList() {
         membersList.add("Grandma Tata");
@@ -129,9 +131,24 @@ public class ListviewFamilyDetail extends Activity {
         startActivity(intent);
     }
 
+
     public void myProfile() {
-        Intent intent = new Intent (this, profile.class);
-        startActivity(intent);
+
+
+        //Intent intent = new Intent (this, profile.class);
+        //startActivity(intent);
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String usernameText = mySharedPreferences.getString(Name, "");
+
+        if (usernameText.equals("Grandma Tata")) {
+            Intent intent = new Intent(this, profile.class);
+            startActivity(intent);
+        }
+
+        else {
+            Intent intent = new Intent(this, ChildrenProfile.class);
+            startActivity(intent);
+        }
     }
 
 

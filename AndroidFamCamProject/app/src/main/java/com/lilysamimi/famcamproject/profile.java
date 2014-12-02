@@ -218,8 +218,7 @@ public class profile extends Activity {
     }
 
     public void myProfile() {
-        Intent intent = new Intent (this, profile.class);
-        startActivity(intent);
+
     }
 
 
