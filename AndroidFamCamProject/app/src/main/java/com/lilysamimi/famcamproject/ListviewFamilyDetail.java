@@ -25,6 +25,8 @@ public class ListviewFamilyDetail extends Activity {
 
     public static final String Name = "nameKey";
 
+
+    // defined the initList method, add these names into the ArrayList called memberList
     private void initList() {
         membersList.add("Grandma Tata");
         membersList.add("Grandpa John");
@@ -32,14 +34,19 @@ public class ListviewFamilyDetail extends Activity {
         membersList.add("Edgar");
     }
 
+    //created a new ArrayList of strings, named memberList, it will list all the family member name
     List<String> membersList = new ArrayList<String>();
 
+
+    // defined the intheList method, add these descriptions into the ArrayList called description
     private void intheList() {
         description.add("Love cooking for my family :D");
         description.add("I want to go fishing!");
         description.add("Looking forward to Christmas");
         description.add("Watching football game");
     }
+
+    //created a new ArrayList of strings, named description, it will list all the family member's description
 
     List<String> description = new ArrayList<String>();
 
@@ -50,6 +57,7 @@ public class ListviewFamilyDetail extends Activity {
         array_image.add(R.drawable.man2);
         array_image.add(R.drawable.woman2);
     }
+    //created a new ArrayList of integer
 
     ArrayList<Integer> array_image = new ArrayList<Integer>();
 
