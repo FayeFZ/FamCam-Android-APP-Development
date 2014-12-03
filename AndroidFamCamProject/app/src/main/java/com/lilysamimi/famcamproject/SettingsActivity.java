@@ -23,6 +23,9 @@ public class SettingsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        //In the onCreate, I linked the logout button to a onclickListener. When you click the button,
+        // it will do the showDialog() method
+
         Button button = (Button) findViewById(R.id.logout);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -31,11 +34,16 @@ public class SettingsActivity extends Activity {
         });
     }
 
+    //now define the showDialog method: I create a new DialogFragment with the title string
+    // "are you sure you want to log out?" This new Fragment will show a dialog
+
     void showDialog() {
         DialogFragment newFragment = LogoutDialogFragment
                 .newInstance(R.string.Logout_dialog_two_buttons_title);
         newFragment.show(getFragmentManager(), "dialog");
     }
+
+    //here it defined the positive click method, when you click ok, it will open MainActivity class, the log is to record what user do
 
     public void doPositiveClick() {
         Intent intent = new Intent(this, MainActivity.class);
@@ -43,11 +51,19 @@ public class SettingsActivity extends Activity {
         Log.i("FamCamProject", "Positive click!");
     }
 
+    //here it defined the negative click, when you click no, it go back and do nothing, the log is to record what user do
+
     public void doNegativeClick() {
         Log.i("FamCamProject", "Negative click!");
     }
 
+
+    //this logout dialogFragment class is extends from the dialogFragment class
+
     public static class LogoutDialogFragment extends DialogFragment {
+
+        //here it defined the logoutFragment method, and a new frag method, the new frag method is put the title "are you sure you want to logout?"
+        // in the dialog fragment
 
         public static LogoutDialogFragment newInstance(int title) {
             LogoutDialogFragment frag = new LogoutDialogFragment();
@@ -57,10 +73,16 @@ public class SettingsActivity extends Activity {
             return frag;
         }
 
+        //here it created a new onCreate thing, it shows what will happen when it runs
+
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             int title = getArguments().getInt("title");
 
+            //AlertDialog is a android build in method,it help you build the alertDialog, the alert dialog has three parts:
+            //1. title; 2. Yes Button, when clicked, it will do the doPositiveClick method which we defined on the top.
+            //3. No button, when click, it will do the doNegativeClick method
+            
             return new AlertDialog.Builder(getActivity())
                     .setTitle(title)
                     .setPositiveButton(R.string.Logout_dialog_yes,
